@@ -28,7 +28,7 @@ extension Date {
         return calendar.component(.weekday, from: self)
     }
 
-    var weekdaySymbol: String {
+    var shortWeekdaySymbol: String {
         return Calendar.current.shortWeekdaySymbols[weekday - 1]
     }
 
@@ -36,13 +36,13 @@ extension Date {
         return NSCalendar.current.isDate(self, inSameDayAs: date)
     }
 
-    func offsetDay(_ day: Int) -> Date? {
+    func addDay(_ day: Int) -> Date? {
         return Calendar.current.date(byAdding: .day, value: day, to: self)
     }
 
     func string(dateFormat: String) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: self)
     }
 

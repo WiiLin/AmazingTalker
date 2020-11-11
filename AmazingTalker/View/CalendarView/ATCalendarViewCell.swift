@@ -31,7 +31,7 @@ class ATCalendarViewCell: UICollectionViewCell, NibLoadableView, ReusableView {
             weekDayLabel.textColor = .disableGray
             dayLabel.textColor = .disableGray
         }
-        weekDayLabel.text = date.weekdaySymbol
+        weekDayLabel.text = date.shortWeekdaySymbol
         dayLabel.text = "\(date.day)"
 
         return needConfigureDayTimetable

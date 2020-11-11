@@ -42,7 +42,6 @@ class ATCalendarView: UICollectionView {
     private func customInit() {
         register(ATCalendarViewCell.self)
         collectionViewLayout = flowLayout
-        delegate = self
         dataSource = self
     }
 }
@@ -58,12 +57,12 @@ extension ATCalendarView {
     }
 
     func goLastWeek() {
-        guard canGoLastWeek == true, let last = weekDate.last, let offset = last.offsetDay(-7) else { return }
+        guard canGoLastWeek == true, let last = weekDate.last, let offset = last.addDay(-7) else { return }
         weekDate = Date.weekDateRange(date: offset)
     }
 
     func goNextWeek() {
-        guard canGoNextWeek == true, let last = weekDate.last, let offset = last.offsetDay(7) else { return }
+        guard canGoNextWeek == true, let last = weekDate.last, let offset = last.addDay(7) else { return }
         weekDate = Date.weekDateRange(date: offset)
     }
 }
@@ -75,7 +74,7 @@ private extension ATCalendarView {
         guard let first = weekDate.first else {
             return
         }
-        if let lastWeekDay = first.offsetDay(-7), let lastWeekDayLast = Date.weekDateRange(date: lastWeekDay).last, lastWeekDayLast.needConfigureDayTimetable {
+        if let lastWeekDay = first.addDay(-7), let lastWeekDayLast = Date.weekDateRange(date: lastWeekDay).last, lastWeekDayLast.needConfigureDayTimetable {
             canGoLastWeek = true
         } else {
             canGoLastWeek = false
@@ -87,27 +86,16 @@ private extension ATCalendarView {
     }
 
     func reloadWeekRangeDescription() {
-        guard weekDate.count == 7, let first = weekDate.first, let last = weekDate.last else { return }
+        guard weekDate.count == Calendar.current.shortWeekdaySymbols.count, let first = weekDate.first, let last = weekDate.last else { return }
         let rangeDescriptionFormat = "%d/%02d/%02d - %d"
         let rangeDescription = String(format: rangeDescriptionFormat, first.year, first.month, first.day, last.day)
         weekRangeDescription = rangeDescription
     }
 }
 
-// MARK: - UICollectionViewDelegate
-
-extension ATCalendarView: UICollectionViewDelegate {}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-
-extension ATCalendarView: UICollectionViewDelegateFlowLayout {}
-
-// MARK: - ATCalendarView
+// MARK: - UICollectionViewDataSource
 
 extension ATCalendarView: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return weekDate.count

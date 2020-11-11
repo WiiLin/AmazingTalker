@@ -39,7 +39,6 @@ extension NibLoadableView where Self: UIView {
     }
 }
 
-// Confirming Collection View and TableView for Registering and Dequeing
 extension UICollectionView {
     func register<T: UICollectionViewCell>(_: T.Type) where T: ReusableView {
         register(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
@@ -51,8 +50,6 @@ extension UICollectionView {
         register(nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
 
-    // Registering Supplementary View
-
     func register<T: UICollectionReusableView>(_: T.Type, supplementaryViewOfKind: String) where T: ReusableView {
         register(T.self, forSupplementaryViewOfKind: supplementaryViewOfKind, withReuseIdentifier: T.defaultReuseIdentifier)
     }
@@ -62,8 +59,6 @@ extension UICollectionView {
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         register(nib, forSupplementaryViewOfKind: supplementaryViewOfKind, withReuseIdentifier: T.defaultReuseIdentifier)
     }
-
-    // Dequeing
 
     func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T where T: ReusableView {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
@@ -81,7 +76,6 @@ extension UICollectionView {
 }
 
 extension UITableView {
-    // Registering Cell
     func register<T: UITableViewCell>(_: T.Type) where T: ReusableView {
         register(T.self, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
@@ -92,8 +86,6 @@ extension UITableView {
         register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
 
-    // Registering HeaderFooterView
-
     func register<T: UITableViewHeaderFooterView>(_: T.Type) where T: ReusableView {
         register(T.self, forHeaderFooterViewReuseIdentifier: T.defaultReuseIdentifier)
     }
@@ -103,8 +95,6 @@ extension UITableView {
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         register(nib, forHeaderFooterViewReuseIdentifier: T.defaultReuseIdentifier)
     }
-
-    // Dequeing
 
     func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T: ReusableView {
         guard let cell = dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {

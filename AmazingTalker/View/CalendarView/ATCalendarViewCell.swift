@@ -24,12 +24,14 @@ class ATCalendarViewCell: UICollectionViewCell, NibLoadableView, ReusableView {
         super.awakeFromNib()
     }
 
-    func configureDate(_ date: Date, isPastDays: Bool) {
-        if isPastDays == false {
-            enableView.backgroundColor = .disableGray
-            weekDayLabel.textColor = .disableGray
-            dayLabel.textColor = .disableGray
-        }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        enableView.backgroundColor = .disableGray
+        weekDayLabel.textColor = .disableGray
+        dayLabel.textColor = .disableGray
+    }
+
+    func configureDate(_ date: Date) {
         weekDayLabel.text = date.shortWeekdaySymbol
         dayLabel.text = "\(date.day)"
     }

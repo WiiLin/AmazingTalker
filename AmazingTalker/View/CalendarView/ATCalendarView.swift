@@ -103,9 +103,10 @@ extension ATCalendarView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath) as ATCalendarViewCell
         let date = weekDate[indexPath.row]
-        let isPastDays: Bool = date.isPastDays
-        cell.configureDate(weekDate[indexPath.row], isPastDays: isPastDays)
-        if isPastDays {
+
+        cell.configureDate(weekDate[indexPath.row])
+
+        if date.isPastDays {
             cell.configureDayTimetable(calendarViewDelegate?.getDayTimetable(date: weekDate[indexPath.row]) ?? [])
         }
         return cell

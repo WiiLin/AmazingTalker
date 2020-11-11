@@ -17,4 +17,8 @@ extension UIColor {
         return UIColor(named: "Enable Green")
     }
     
+    static var textBlack: UIColor? {
+        return UIColor(named: "Text Black")
+    }
+    
 }

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,9 +16,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dor-z0-h23">
+                                <rect key="frame" x="70" y="105" width="30" height="30"/>
+                                <color key="backgroundColor" name="Disable Gray"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" name="Enable Green"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.21176470589999999" green="0.82352941180000006" blue="0.76862745099999996" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickNextWeek:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PlV-p0-4vy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoI-s9-k2g">
+                                <rect key="frame" x="120" y="109.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Text Black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezi-bW-5jk">
+                                <rect key="frame" x="352" y="821" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Text Black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRQ-Pg-e65">
+                                <rect key="frame" x="20" y="64" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="teaching_time"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGo-fS-Y1s" customClass="ATCalendarView" customModule="AmazingTalker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="165" width="374" height="626"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52B-xP-FN9">
+                                <rect key="frame" x="20" y="105" width="30" height="30"/>
+                                <color key="backgroundColor" name="Disable Gray"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" name="Enable Green"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.21176470588235294" green="0.82352941176470584" blue="0.7686274509803922" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickLastWeek:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LUe-l2-yvX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VoI-s9-k2g" firstAttribute="centerY" secondItem="dor-z0-h23" secondAttribute="centerY" id="2BB-DZ-h1Y"/>
+                            <constraint firstItem="dor-z0-h23" firstAttribute="leading" secondItem="52B-xP-FN9" secondAttribute="trailing" constant="20" id="2NL-Yb-SPD"/>
+                            <constraint firstItem="lGo-fS-Y1s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5DL-o7-oWj"/>
+                            <constraint firstItem="dor-z0-h23" firstAttribute="top" secondItem="52B-xP-FN9" secondAttribute="top" id="6t9-su-gKM"/>
+                            <constraint firstItem="52B-xP-FN9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ECg-6E-6Ab"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lGo-fS-Y1s" secondAttribute="trailing" constant="20" id="Nha-NF-aIA"/>
+                            <constraint firstItem="fRQ-Pg-e65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rhc-SS-p4a"/>
+                            <constraint firstItem="VoI-s9-k2g" firstAttribute="leading" secondItem="dor-z0-h23" secondAttribute="trailing" constant="20" id="ayy-nD-dkI"/>
+                            <constraint firstItem="52B-xP-FN9" firstAttribute="top" secondItem="fRQ-Pg-e65" secondAttribute="bottom" constant="20" id="em8-hp-g9I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ezi-bW-5jk" secondAttribute="trailing" constant="20" id="kxY-0v-c9x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ezi-bW-5jk" secondAttribute="bottom" constant="20" id="n3i-1U-tK0"/>
+                            <constraint firstItem="Ezi-bW-5jk" firstAttribute="top" secondItem="lGo-fS-Y1s" secondAttribute="bottom" constant="30" id="pDj-7M-NhY"/>
+                            <constraint firstItem="lGo-fS-Y1s" firstAttribute="top" secondItem="dor-z0-h23" secondAttribute="bottom" constant="30" id="vRt-mD-JFR"/>
+                            <constraint firstItem="fRQ-Pg-e65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xyK-Of-5DP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="lGo-fS-Y1s" id="FC5-zc-Rw0"/>
+                        <outlet property="lastWeekButton" destination="52B-xP-FN9" id="UAm-Gc-2o9"/>
+                        <outlet property="nextWeekButton" destination="dor-z0-h23" id="tdn-iP-JTW"/>
+                        <outlet property="timeZoneLabel" destination="Ezi-bW-5jk" id="eAd-bW-Q2c"/>
+                        <outlet property="weekRangeLabel" destination="VoI-s9-k2g" id="AWb-zS-upv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +102,15 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="Disable Gray">
+            <color red="0.81568627450980391" green="0.81568627450980391" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Enable Green">
+            <color red="0.21176470588235294" green="0.82352941176470584" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text Black">
+            <color red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

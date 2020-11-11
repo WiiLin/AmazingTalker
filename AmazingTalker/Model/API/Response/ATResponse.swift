@@ -11,12 +11,8 @@ struct ATResponse {
     struct Empty: Decodable { }
     
     struct Calendar: Decodable {
-        struct Range: Decodable {
-            let start: Date
-            let end: Date
-        }
-        let available: [Range]
-        let booked: [Range]
+        let available: [ATTimePeriod.Range]
+        let booked: [ATTimePeriod.Range]
     }
 
 }

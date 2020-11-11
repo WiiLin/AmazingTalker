@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ATCalendarViewCell" id="h72-Eq-jgd" customClass="ATCalendarViewCell" customModule="AmazingTalker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="313"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oo3-55-5V9">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="313"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHN-IX-a7k">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="4"/>
+                        <color key="backgroundColor" name="Enable Green"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="vcf-GH-rrk"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2VY-Xf-WiC">
+                        <rect key="frame" x="0.0" y="14" width="50" height="46"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2D-7F-iJ2">
+                                <rect key="frame" x="4.5" y="0.0" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Text Black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYS-63-sac">
+                                <rect key="frame" x="4.5" y="25.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Text Black"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Loq-u7-iI6">
+                        <rect key="frame" x="0.0" y="70" width="50" height="233"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="h72-Eq-jgd" id="L5w-tn-PBe"/>
+                            <outlet property="delegate" destination="h72-Eq-jgd" id="VRA-Su-dP8"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="2VY-Xf-WiC" secondAttribute="trailing" id="0hv-Xn-H0k"/>
+                    <constraint firstAttribute="bottom" secondItem="Loq-u7-iI6" secondAttribute="bottom" constant="10" id="Lcr-hG-i7u"/>
+                    <constraint firstItem="GHN-IX-a7k" firstAttribute="leading" secondItem="oo3-55-5V9" secondAttribute="leading" id="MYC-c0-Obl"/>
+                    <constraint firstAttribute="trailing" secondItem="GHN-IX-a7k" secondAttribute="trailing" id="UYD-QG-HOn"/>
+                    <constraint firstItem="Loq-u7-iI6" firstAttribute="top" secondItem="2VY-Xf-WiC" secondAttribute="bottom" constant="10" id="YOo-zI-7kG"/>
+                    <constraint firstItem="2VY-Xf-WiC" firstAttribute="leading" secondItem="oo3-55-5V9" secondAttribute="leading" id="c0L-g5-NAM"/>
+                    <constraint firstAttribute="trailing" secondItem="Loq-u7-iI6" secondAttribute="trailing" id="dQ7-2i-I4G"/>
+                    <constraint firstItem="GHN-IX-a7k" firstAttribute="top" secondItem="oo3-55-5V9" secondAttribute="top" id="gYK-75-UzZ"/>
+                    <constraint firstItem="Loq-u7-iI6" firstAttribute="leading" secondItem="oo3-55-5V9" secondAttribute="leading" id="mMT-Zi-TBg"/>
+                    <constraint firstItem="2VY-Xf-WiC" firstAttribute="top" secondItem="GHN-IX-a7k" secondAttribute="bottom" constant="10" id="zqW-ew-eBv"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="50" height="313"/>
+            <connections>
+                <outlet property="dayLabel" destination="oYS-63-sac" id="EKn-6n-CKZ"/>
+                <outlet property="enableView" destination="GHN-IX-a7k" id="HHH-TE-0ZR"/>
+                <outlet property="tableView" destination="Loq-u7-iI6" id="4Gr-WO-pJo"/>
+                <outlet property="weekDayLabel" destination="c2D-7F-iJ2" id="sKd-BB-8Dy"/>
+            </connections>
+            <point key="canvasLocation" x="28.985507246376812" y="92.745535714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Enable Green">
+            <color red="0.21176470588235294" green="0.82352941176470584" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text Black">
+            <color red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

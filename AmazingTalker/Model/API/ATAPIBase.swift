@@ -127,7 +127,7 @@ class ATAPIBase: NSObject  {
                                                           encoding: method == .get ? URLEncoding.default : JSONEncoding.default,
                                                           headers: headers,
                                                           interceptor: self)
-        self.request(request: request, method: method, parameters: parameters) {[weak self] result in
+        self.request(request: request, method: method, parameters: parameters) { result in
             switch result {
             case let .success(data):
                 parseResponseData(data, responseType: responseType, completionHandler: completionHandler)

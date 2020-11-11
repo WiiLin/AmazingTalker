@@ -8,7 +8,7 @@
 import UIKit
 
 class ATTimePeriodCell: UITableViewCell, NibLoadableView, ReusableView {
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,10 +19,9 @@ class ATTimePeriodCell: UITableViewCell, NibLoadableView, ReusableView {
 
         // Configure the view for the selected state
     }
-    
+
     func configrure(timePeriod: ATTimePeriod) {
-        self.timeLabel.text = timePeriod.range.start.string(dateFormat: "HH:mm")
-        self.timeLabel.textColor = timePeriod.period.color
+        timeLabel.text = timePeriod.range.start.string(dateFormat: "HH:mm")
+        timeLabel.textColor = timePeriod.period.color
     }
-    
 }

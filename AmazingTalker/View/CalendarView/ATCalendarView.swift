@@ -11,27 +11,29 @@ protocol ATCalendarViewDelegate: class {
     func getDayTimetable(date: Date) -> [ATTimePeriod]
 }
 
-
 class ATCalendarView: UICollectionView {
-    
-    //MARK: - Properties
+    // MARK: - Properties
+
     private let flowLayout = ATCalendarViewLayout()
-    
+
     private var weekDate: [Date] = Date.weekDateRange(date: Date()) {
         didSet {
             reloadCalendarView()
         }
     }
+
     @objc dynamic var canGoLastWeek: Bool = false
     @objc dynamic var canGoNextWeek: Bool = false
     @objc dynamic var weekRangeDescription: String = ""
     weak var calendarViewDelegate: ATCalendarViewDelegate?
-    //MARK: - Init
+
+    // MARK: - Init
+
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         customInit()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         customInit()
@@ -43,10 +45,10 @@ class ATCalendarView: UICollectionView {
         delegate = self
         dataSource = self
     }
-    
 }
 
-//MARK: - Interface
+// MARK: - Interface
+
 extension ATCalendarView {
     func reloadCalendarView() {
         reloadData()
@@ -54,60 +56,63 @@ extension ATCalendarView {
         reloadCanGoNextWeek()
         reloadWeekRangeDescription()
     }
+
     func goLastWeek() {
         guard canGoLastWeek == true, let last = weekDate.last, let offset = last.offsetDay(-7) else { return }
         weekDate = Date.weekDateRange(date: offset)
     }
-    
+
     func goNextWeek() {
         guard canGoNextWeek == true, let last = weekDate.last, let offset = last.offsetDay(7) else { return }
         weekDate = Date.weekDateRange(date: offset)
-        
     }
 }
-//MARK: - Private
+
+// MARK: - Private
+
 private extension ATCalendarView {
     func reloadCanGoLastWeek() {
         guard let first = weekDate.first else {
             return
         }
-        if let lastWeekDay = first.offsetDay(-7),let lastWeekDayLast = Date.weekDateRange(date: lastWeekDay).last, lastWeekDayLast.needConfigureDayTimetable {
-            canGoLastWeek =  true
+        if let lastWeekDay = first.offsetDay(-7), let lastWeekDayLast = Date.weekDateRange(date: lastWeekDay).last, lastWeekDayLast.needConfigureDayTimetable {
+            canGoLastWeek = true
         } else {
-            canGoLastWeek =  false
+            canGoLastWeek = false
         }
     }
-    
+
     func reloadCanGoNextWeek() {
-        canGoNextWeek =  true
+        canGoNextWeek = true
     }
-    
+
     func reloadWeekRangeDescription() {
-        guard weekDate.count == 7,let first = weekDate.first, let last = weekDate.last else { return }
+        guard weekDate.count == 7, let first = weekDate.first, let last = weekDate.last else { return }
         let rangeDescriptionFormat = "%d/%02d/%02d - %d"
-        let rangeDescription = String.init(format: rangeDescriptionFormat, first.year, first.month,first.day, last.day)
+        let rangeDescription = String(format: rangeDescriptionFormat, first.year, first.month, first.day, last.day)
         weekRangeDescription = rangeDescription
     }
 }
 
-//MARK: - UICollectionViewDelegate
-extension ATCalendarView: UICollectionViewDelegate {
-  
-}
+// MARK: - UICollectionViewDelegate
 
-//MARK: - UICollectionViewDelegateFlowLayout
-extension ATCalendarView: UICollectionViewDelegateFlowLayout {
-}
+extension ATCalendarView: UICollectionViewDelegate {}
 
-//MARK: - ATCalendarView
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension ATCalendarView: UICollectionViewDelegateFlowLayout {}
+
+// MARK: - ATCalendarView
+
 extension ATCalendarView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return weekDate.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath) as ATCalendarViewCell
         let needConfigureDayTimetable = cell.configureDate(weekDate[indexPath.row])
@@ -117,5 +122,3 @@ extension ATCalendarView: UICollectionViewDataSource {
         return cell
     }
 }
-
-

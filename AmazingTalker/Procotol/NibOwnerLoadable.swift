@@ -22,15 +22,15 @@ extension NibOwnerLoadable where Self: UIView {
         guard let views = Self.nib.instantiate(withOwner: self, options: nil) as? [UIView], let contentView = views.first else {
             fatalError("Fail to load \(self) nib content")
         }
-        
+
         return contentView
     }
-    
+
     func loadNibContent() {
         guard let views = Self.nib.instantiate(withOwner: self, options: nil) as? [UIView], let contentView = views.first else {
             fatalError("Fail to load \(self) nib content")
         }
-        
+
         addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true

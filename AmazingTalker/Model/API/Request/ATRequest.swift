@@ -8,7 +8,5 @@
 import Foundation
 
 struct ATRequest {
-    struct Empty: Encodable { }
-
+    struct Empty: Encodable {}
 }
-

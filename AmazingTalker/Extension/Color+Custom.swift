@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 extension UIColor {
     static var disableGray: UIColor? {
         return UIColor(named: "Disable Gray")
@@ -16,9 +15,8 @@ extension UIColor {
     static var enableGreen: UIColor? {
         return UIColor(named: "Enable Green")
     }
-    
+
     static var textBlack: UIColor? {
         return UIColor(named: "Text Black")
     }
-    
 }

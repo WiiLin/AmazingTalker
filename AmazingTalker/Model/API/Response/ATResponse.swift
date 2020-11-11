@@ -8,11 +8,10 @@
 import Foundation
 
 struct ATResponse {
-    struct Empty: Decodable { }
-    
+    struct Empty: Decodable {}
+
     struct Calendar: Decodable {
         let available: [ATTimePeriod.Range]
         let booked: [ATTimePeriod.Range]
     }
-
 }

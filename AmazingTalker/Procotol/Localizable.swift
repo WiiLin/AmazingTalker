@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 protocol Localizable {
     var localized: String { get }
 }
@@ -17,7 +16,6 @@ extension String: Localizable {
         return NSLocalizedString(self, comment: "")
     }
 }
-
 
 protocol XIBLocalizable {
     var xibLocKey: String? { get set }

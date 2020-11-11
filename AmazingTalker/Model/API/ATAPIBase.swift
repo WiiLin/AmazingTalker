@@ -5,8 +5,8 @@
 //  Created by Wii Lin on 2020/11/10.
 //
 
-import Foundation
 import Alamofire
+import Foundation
 
 enum ATAPIURLComponents: String {
     case host = "amazingtalker.com"
@@ -17,11 +17,11 @@ enum ATAPIURLComponents: String {
 
 enum ATAPIPath: String, Equatable {
     case calendar
-    
+
     var path: String {
         return ATAPIURLComponents.basePath.rawValue + rawValue
     }
-    
+
     var testCaseJsonData: Data? {
         let fileName: String = {
             switch self {
@@ -36,10 +36,7 @@ enum ATAPIPath: String, Equatable {
     }
 }
 
-
-
-class ATAPIBase: NSObject  {
-
+class ATAPIBase: NSObject {
     private let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -70,7 +67,7 @@ class ATAPIBase: NSObject  {
         session.session.configuration.timeoutIntervalForRequest = 60
         return session
     }()
-    
+
     let testMode: Bool = true
 
     // MARK: - Interface
@@ -82,13 +79,12 @@ class ATAPIBase: NSObject  {
                                                                 requestType: ApiRequest?,
                                                                 responseType: ApiResponse.Type,
                                                                 completionHandler: @escaping (Result<ApiResponse, ATError>) -> Void) {
-        
         func parseResponseData<ApiResponse: Decodable>(_ data: Data?,
-                               responseType: ApiResponse.Type,
-                               completionHandler: @escaping (Result<ApiResponse, ATError>) -> Void) {
+                                                       responseType: ApiResponse.Type,
+                                                       completionHandler: @escaping (Result<ApiResponse, ATError>) -> Void) {
             if let data = data {
                 do {
-                    let response = try self.jsonDecoder.decode(responseType, from: data)
+                    let response = try jsonDecoder.decode(responseType, from: data)
                     completionHandler(.success(response))
                 } catch {
                     print("JSONDecoder Error\(error)")
@@ -99,15 +95,12 @@ class ATAPIBase: NSObject  {
             } else {
                 completionHandler(.failure(.apiResponseSourceError))
             }
-            
         }
         guard testMode == false else {
             parseResponseData(path.testCaseJsonData, responseType: responseType, completionHandler: completionHandler)
             return
         }
-        
-        
-        
+
         baseURLComponents.path = path.path
         guard let url = baseURLComponents.url else {
             completionHandler(.failure(.urlCreateError))
@@ -141,7 +134,6 @@ class ATAPIBase: NSObject  {
 // MARK: - Private Method
 
 private extension ATAPIBase {
-    
     func apiURL(path: ATAPIPath) -> URL? {
         baseURLComponents.path = path.path
         if let url = baseURLComponents.url {
@@ -209,7 +201,6 @@ private extension ATAPIBase {
     }
 }
 
-
 extension Encodable {
     var parameters: Parameters? {
         let jsonEncoder = JSONEncoder()
@@ -217,7 +208,6 @@ extension Encodable {
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? Parameters }
     }
 }
-
 
 extension Data {
     var jsonDataDictionary: [String: Any]? {

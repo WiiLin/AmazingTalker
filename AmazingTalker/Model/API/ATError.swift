@@ -14,7 +14,7 @@ enum ATError: Error, Equatable {
     case serverErrorParseFailedError
     case custom(String)
     case serverError(String, Int)
-    
+
     var description: String {
         switch self {
         case .apiResponseError:
@@ -31,7 +31,7 @@ enum ATError: Error, Equatable {
             return message
         }
     }
-    
+
     static func serverError(errorObject: [String: Any]) -> ATError {
         if let code = errorObject["statusCode"] as? Int,
             let message = errorObject["message"] as? String {
@@ -60,7 +60,6 @@ enum ATError: Error, Equatable {
         }
     }
 }
-
 
 extension NSError {
     public var isCancel: Bool {

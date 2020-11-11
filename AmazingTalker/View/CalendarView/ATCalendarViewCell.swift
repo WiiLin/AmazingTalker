@@ -24,17 +24,14 @@ class ATCalendarViewCell: UICollectionViewCell, NibLoadableView, ReusableView {
         super.awakeFromNib()
     }
 
-    func configureDate(_ date: Date) -> Bool {
-        let needConfigureDayTimetable: Bool = date.needConfigureDayTimetable
-        if needConfigureDayTimetable == false {
+    func configureDate(_ date: Date, isPastDays: Bool) {
+        if isPastDays == false {
             enableView.backgroundColor = .disableGray
             weekDayLabel.textColor = .disableGray
             dayLabel.textColor = .disableGray
         }
         weekDayLabel.text = date.shortWeekdaySymbol
         dayLabel.text = "\(date.day)"
-
-        return needConfigureDayTimetable
     }
 
     func configureDayTimetable(_ timePeriod: [ATTimePeriod]) {

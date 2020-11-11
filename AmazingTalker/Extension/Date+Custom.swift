@@ -46,6 +46,15 @@ extension Date {
         return dateFormatter.string(from: self)
     }
 
+    var isPastDays: Bool {
+        let todayDate = Date()
+        if inSameDayAs(todayDate) {
+            return true
+        } else {
+            return self > todayDate
+        }
+    }
+
     static func weekDateRange(date: Date) -> [Date] {
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: date)
@@ -56,12 +65,7 @@ extension Date {
         return days
     }
 
-    var needConfigureDayTimetable: Bool {
-        let todayDate = Date()
-        if inSameDayAs(todayDate) {
-            return true
-        } else {
-            return self > todayDate
-        }
+    static var weekDayCount: Int {
+        return Calendar.current.shortWeekdaySymbols.count
     }
 }

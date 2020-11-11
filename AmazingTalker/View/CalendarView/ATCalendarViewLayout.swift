@@ -17,7 +17,6 @@ class ATCalendarViewLayout: UICollectionViewFlowLayout {
         sectionInset = .zero
         let totalPading: CGFloat = minimumInteritemSpacing * (column - 1)
         let width = (collectionView.frame.width - totalPading - sectionInset.left - sectionInset.right) / column
-//       estimatedItemSize = CGSize(width: width, height: 10)
         itemSize = CGSize(width: width, height: collectionView.bounds.height)
     }
 

@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ATCalendarViewCell: UICollectionViewCell, NibLoadableView, ReusableView {
+class ATCalendarViewCell: UICollectionViewCell {
     @IBOutlet var enableView: UIView!
     @IBOutlet var weekDayLabel: UILabel!
     @IBOutlet var dayLabel: UILabel!
     @IBOutlet var tableView: UITableView! {
         didSet {
-            tableView.register(ATTimePeriodCell.self)
+            tableView.register(UINib(nibName: "\(ATTimePeriodCell.self)", bundle: nil), forCellReuseIdentifier: "\(ATTimePeriodCell.self)")
             tableView.tableHeaderView = UIView(frame: .init(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
         }
     }
@@ -51,7 +51,7 @@ extension ATCalendarViewCell: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath) as ATTimePeriodCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(ATTimePeriodCell.self)", for: indexPath) as! ATTimePeriodCell
         cell.configrure(timePeriod: dataSource[indexPath.row])
         return cell
     }

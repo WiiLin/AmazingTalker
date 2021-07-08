@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ATTimePeriodCell: UITableViewCell, NibLoadableView, ReusableView {
+class ATTimePeriodCell: UITableViewCell {
     @IBOutlet var timeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

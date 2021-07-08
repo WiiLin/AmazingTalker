@@ -25,8 +25,6 @@
 		289B3FEC255A7BDE00C8D147 /* ATCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FEB255A7BDE00C8D147 /* ATCalendarView.swift */; };
 		289B3FF0255A7BF900C8D147 /* ATCalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FEE255A7BF900C8D147 /* ATCalendarViewCell.swift */; };
 		289B3FF1255A7BF900C8D147 /* ATCalendarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289B3FEF255A7BF900C8D147 /* ATCalendarViewCell.xib */; };
-		289B3FF4255A7C2400C8D147 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FF3255A7C2400C8D147 /* ReusableView.swift */; };
-		289B3FF7255A7C9900C8D147 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FF6255A7C9900C8D147 /* NibOwnerLoadable.swift */; };
 		289B4000255A83B800C8D147 /* ATCalendarViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */; };
 		289B400F255AEA4000C8D147 /* Date+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B400E255AEA4000C8D147 /* Date+Custom.swift */; };
 		289B4014255B77D800C8D147 /* ATDayTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B4013255B77D800C8D147 /* ATDayTimetable.swift */; };
@@ -64,8 +62,6 @@
 		289B3FEB255A7BDE00C8D147 /* ATCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCalendarView.swift; sourceTree = "<group>"; };
 		289B3FEE255A7BF900C8D147 /* ATCalendarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCalendarViewCell.swift; sourceTree = "<group>"; };
 		289B3FEF255A7BF900C8D147 /* ATCalendarViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATCalendarViewCell.xib; sourceTree = "<group>"; };
-		289B3FF3255A7C2400C8D147 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		289B3FF6255A7C9900C8D147 /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
 		289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCalendarViewLayout.swift; sourceTree = "<group>"; };
 		289B400E255AEA4000C8D147 /* Date+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Custom.swift"; sourceTree = "<group>"; };
 		289B4013255B77D800C8D147 /* ATDayTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDayTimetable.swift; sourceTree = "<group>"; };
@@ -169,8 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				28379A3D255A2509000750EF /* Localizable.swift */,
-				289B3FF3255A7C2400C8D147 /* ReusableView.swift */,
-				289B3FF6255A7C9900C8D147 /* NibOwnerLoadable.swift */,
 			);
 			path = Procotol;
 			sourceTree = "<group>";
@@ -325,11 +319,9 @@
 				28DF8DD126975BB300CD0462 /* TimeZone+Custom.swift in Sources */,
 				28379A36255A22E1000750EF /* Color+Custom.swift in Sources */,
 				28379A0C255A1FDC000750EF /* SceneDelegate.swift in Sources */,
-				289B3FF4255A7C2400C8D147 /* ReusableView.swift in Sources */,
 				28379A42255A25D5000750EF /* APIHandler.swift in Sources */,
 				28379A4E255A2A95000750EF /* APIError.swift in Sources */,
 				289B3FF0255A7BF900C8D147 /* ATCalendarViewCell.swift in Sources */,
-				289B3FF7255A7C9900C8D147 /* NibOwnerLoadable.swift in Sources */,
 				28DF8DC626974A8800CD0462 /* URL+Custom.swift in Sources */,
 				289B400F255AEA4000C8D147 /* Date+Custom.swift in Sources */,
 				289B3FEC255A7BDE00C8D147 /* ATCalendarView.swift in Sources */,

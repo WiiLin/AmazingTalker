@@ -40,7 +40,7 @@ class ATCalendarView: UICollectionView {
     }
 
     private func customInit() {
-        register(ATCalendarViewCell.self)
+        register(UINib(nibName: "\(ATCalendarViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(ATCalendarViewCell.self)")
         collectionViewLayout = flowLayout
         dataSource = self
     }
@@ -101,7 +101,7 @@ extension ATCalendarView: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(for: indexPath) as ATCalendarViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ATCalendarViewCell.self)", for: indexPath) as! ATCalendarViewCell
         let date = weekDate[indexPath.row]
 
         cell.configureDate(weekDate[indexPath.row])

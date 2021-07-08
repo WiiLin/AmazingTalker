@@ -16,7 +16,7 @@ class APIRequestHandler {
         return session
     }()
 
-    func request<ApiRequest: Api, ApiResponse: Decodable>(api: ApiRequest,
+    func request<ApiRequest: API, ApiResponse: Decodable>(api: ApiRequest,
                                                           responseType: ApiResponse.Type,
                                                           completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void) {
         guard api.testMode == false else {

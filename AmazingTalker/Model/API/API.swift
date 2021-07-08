@@ -6,19 +6,20 @@
 //
 
 import Alamofire
+import Foundation
 
-protocol Api {
+protocol API {
     associatedtype ApiResponse: Decodable
 
     var request: Encodable? { get }
-    var path: APIHandler.Path { get }
+    var path: APIPath { get }
     var method: HTTPMethod { get }
     var headers: HTTPHeaders? { get }
     var parameters: Parameters? { get }
     var testMode: Bool { get }
 }
 
-extension Api where Self: Encodable {
+extension API where Self: Encodable {
     var parameters: Parameters? {
         if let requestType = request, let parameters = requestType.parameters(keyEncodingStrategy: .convertToSnakeCase), !parameters.isEmpty {
             return parameters
@@ -28,7 +29,19 @@ extension Api where Self: Encodable {
     }
 }
 
-struct CalenderApi: Api, Encodable {
+enum APIPath: String {
+    case calendar
+    var path: String {
+        return rawValue
+    }
+
+    var testData: Data? {
+        guard let path = Bundle.main.path(forResource: path, ofType: "json") else { return nil }
+        return try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+    }
+}
+
+struct CalenderAPI: API, Encodable {
     struct Calendar: Decodable {
         let available: [ATTimePeriod.Range]
         let booked: [ATTimePeriod.Range]
@@ -36,7 +49,7 @@ struct CalenderApi: Api, Encodable {
 
     typealias ApiResponse = Calendar
     var request: Encodable? { return self }
-    var path: APIHandler.Path { return .calendar }
+    var path: APIPath { return .calendar }
     var method: HTTPMethod { return .get }
     var headers: HTTPHeaders? { return nil }
     let testMode: Bool

@@ -9,22 +9,11 @@ import Alamofire
 import Foundation
 
 class APIHandler {
-    enum Path: String {
-        case calendar
-        var path: String {
-            return rawValue
-        }
-
-        var testData: Data? {
-            guard let path = Bundle.main.path(forResource: path, ofType: "json") else { return nil }
-            return try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-        }
-    }
 
     private lazy var requestHandler: APIRequestHandler = APIRequestHandler()
 
-    func getCanender(completionHandler: @escaping (Result<CalenderApi.Calendar, APIError>) -> Void) {
-        let api = CalenderApi(testMode: true)
-        requestHandler.request(api: api, responseType: CalenderApi.Calendar.self, completionHandler: completionHandler)
+    func getCanender(completionHandler: @escaping (Result<CalenderAPI.Calendar, APIError>) -> Void) {
+        let api = CalenderAPI(testMode: true)
+        requestHandler.request(api: api, responseType: CalenderAPI.Calendar.self, completionHandler: completionHandler)
     }
 }

@@ -30,7 +30,7 @@ struct ATTimePeriod {
     let range: Range
     let period: Period
 
-    static func dayTimetable(calendar: CalenderApi.Calendar?, date: Date) -> [ATTimePeriod] {
+    static func dayTimetable(calendar: CalenderAPI.Calendar?, date: Date) -> [ATTimePeriod] {
         guard let calendar = calendar else { return [] }
         let available = calendar.available.filter { $0.start.inSameDayAs(date) }.map { ATTimePeriod(range: $0, period: .available) }
         let booked = calendar.booked.filter { $0.start.inSameDayAs(date) }.map { ATTimePeriod(range: $0, period: .booked) }

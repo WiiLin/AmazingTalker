@@ -12,7 +12,7 @@ class ATMainViewModel {
 
     @Observable var isLoading: Bool = false
     @Observable var errorMessage: String = ""
-    @Observable var calendar: CalenderApi.Calendar?
+    @Observable var calendar: CalenderAPI.Calendar?
 
     func getCalander() {
         isLoading = true

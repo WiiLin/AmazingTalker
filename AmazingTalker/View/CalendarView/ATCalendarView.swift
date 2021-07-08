@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ATCalendarViewDelegate: class {
+protocol ATCalendarViewDelegate: AnyObject {
     func getDayTimetable(date: Date) -> [ATTimePeriod]
 }
 

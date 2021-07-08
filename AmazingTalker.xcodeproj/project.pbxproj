@@ -17,12 +17,8 @@
 		28379A32255A21E9000750EF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28379A31255A21E9000750EF /* Colors.xcassets */; };
 		28379A36255A22E1000750EF /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A35255A22E1000750EF /* Color+Custom.swift */; };
 		28379A3E255A2509000750EF /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A3D255A2509000750EF /* Localizable.swift */; };
-		28379A42255A25D5000750EF /* ATAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A41255A25D5000750EF /* ATAPIManager.swift */; };
-		28379A46255A273F000750EF /* ATAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A45255A273F000750EF /* ATAPIBase.swift */; };
-		28379A4A255A29B4000750EF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28379A49255A29B4000750EF /* Alamofire */; };
+		28379A42255A25D5000750EF /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A41255A25D5000750EF /* APIHandler.swift */; };
 		28379A4E255A2A95000750EF /* ATError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A4D255A2A94000750EF /* ATError.swift */; };
-		28379A5C255A2DD4000750EF /* ATRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A5B255A2DD4000750EF /* ATRequest.swift */; };
-		28379A5F255A2DE5000750EF /* ATResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A5E255A2DE5000750EF /* ATResponse.swift */; };
 		28815B5A255B7EA600B14FAE /* ATTimePeriodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28815B58255B7EA600B14FAE /* ATTimePeriodCell.swift */; };
 		28815B5B255B7EA600B14FAE /* ATTimePeriodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28815B59255B7EA600B14FAE /* ATTimePeriodCell.xib */; };
 		28991909255A443C00EF8881 /* calendar.json in Resources */ = {isa = PBXBuildFile; fileRef = 28991908255A443C00EF8881 /* calendar.json */; };
@@ -34,6 +30,12 @@
 		289B4000255A83B800C8D147 /* ATCalendarViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */; };
 		289B400F255AEA4000C8D147 /* Date+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B400E255AEA4000C8D147 /* Date+Custom.swift */; };
 		289B4014255B77D800C8D147 /* ATDayTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B4013255B77D800C8D147 /* ATDayTimetable.swift */; };
+		28DF8DBD26970D5600CD0462 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DBC26970D5600CD0462 /* Api.swift */; };
+		28DF8DC026970DA000CD0462 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28DF8DBF26970DA000CD0462 /* Alamofire */; };
+		28DF8DC22697149D00CD0462 /* APIParseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC12697149D00CD0462 /* APIParseHandler.swift */; };
+		28DF8DC42697497500CD0462 /* Alamofire+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */; };
+		28DF8DC626974A8800CD0462 /* URL+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC526974A8800CD0462 /* URL+Custom.swift */; };
+		28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,11 +52,8 @@
 		28379A31255A21E9000750EF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		28379A35255A22E1000750EF /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 		28379A3D255A2509000750EF /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
-		28379A41255A25D5000750EF /* ATAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATAPIManager.swift; sourceTree = "<group>"; };
-		28379A45255A273F000750EF /* ATAPIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATAPIBase.swift; sourceTree = "<group>"; };
+		28379A41255A25D5000750EF /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		28379A4D255A2A94000750EF /* ATError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATError.swift; sourceTree = "<group>"; };
-		28379A5B255A2DD4000750EF /* ATRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATRequest.swift; sourceTree = "<group>"; };
-		28379A5E255A2DE5000750EF /* ATResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATResponse.swift; sourceTree = "<group>"; };
 		28815B58255B7EA600B14FAE /* ATTimePeriodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTimePeriodCell.swift; sourceTree = "<group>"; };
 		28815B59255B7EA600B14FAE /* ATTimePeriodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATTimePeriodCell.xib; sourceTree = "<group>"; };
 		28991908255A443C00EF8881 /* calendar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendar.json; sourceTree = "<group>"; };
@@ -66,6 +65,11 @@
 		289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCalendarViewLayout.swift; sourceTree = "<group>"; };
 		289B400E255AEA4000C8D147 /* Date+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Custom.swift"; sourceTree = "<group>"; };
 		289B4013255B77D800C8D147 /* ATDayTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDayTimetable.swift; sourceTree = "<group>"; };
+		28DF8DBC26970D5600CD0462 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		28DF8DC12697149D00CD0462 /* APIParseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParseHandler.swift; sourceTree = "<group>"; };
+		28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Custom.swift"; sourceTree = "<group>"; };
+		28DF8DC526974A8800CD0462 /* URL+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Custom.swift"; sourceTree = "<group>"; };
+		28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28379A4A255A29B4000750EF /* Alamofire in Frameworks */,
+				28DF8DC026970DA000CD0462 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +131,8 @@
 			children = (
 				28379A35255A22E1000750EF /* Color+Custom.swift */,
 				289B400E255AEA4000C8D147 /* Date+Custom.swift */,
+				28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */,
+				28DF8DC526974A8800CD0462 /* URL+Custom.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -172,29 +178,13 @@
 			isa = PBXGroup;
 			children = (
 				28991907255A440A00EF8881 /* TestCase */,
-				28379A51255A2BA9000750EF /* Request */,
-				28379A52255A2BAF000750EF /* Response */,
-				28379A41255A25D5000750EF /* ATAPIManager.swift */,
-				28379A45255A273F000750EF /* ATAPIBase.swift */,
+				28DF8DBC26970D5600CD0462 /* Api.swift */,
+				28379A41255A25D5000750EF /* APIHandler.swift */,
+				28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */,
+				28DF8DC12697149D00CD0462 /* APIParseHandler.swift */,
 				28379A4D255A2A94000750EF /* ATError.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		28379A51255A2BA9000750EF /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				28379A5B255A2DD4000750EF /* ATRequest.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		28379A52255A2BAF000750EF /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				28379A5E255A2DE5000750EF /* ATResponse.swift */,
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		28991907255A440A00EF8881 /* TestCase */ = {
@@ -243,7 +233,7 @@
 			);
 			name = AmazingTalker;
 			packageProductDependencies = (
-				28379A49255A29B4000750EF /* Alamofire */,
+				28DF8DBF26970DA000CD0462 /* Alamofire */,
 			);
 			productName = AmazingTalker;
 			productReference = 28379A06255A1FDC000750EF /* AmazingTalker.app */;
@@ -274,7 +264,7 @@
 			);
 			mainGroup = 283799FD255A1FDC000750EF;
 			packageReferences = (
-				28379A48255A29B4000750EF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				28DF8DBE26970DA000CD0462 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 28379A07255A1FDC000750EF /* Products */;
 			projectDirPath = "";
@@ -308,24 +298,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28DF8DBD26970D5600CD0462 /* Api.swift in Sources */,
 				28815B5A255B7EA600B14FAE /* ATTimePeriodCell.swift in Sources */,
 				289B4000255A83B800C8D147 /* ATCalendarViewLayout.swift in Sources */,
 				28379A0E255A1FDC000750EF /* ATMainViewController.swift in Sources */,
 				28379A0A255A1FDC000750EF /* AppDelegate.swift in Sources */,
-				28379A46255A273F000750EF /* ATAPIBase.swift in Sources */,
+				28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */,
 				289B4014255B77D800C8D147 /* ATDayTimetable.swift in Sources */,
-				28379A5C255A2DD4000750EF /* ATRequest.swift in Sources */,
+				28DF8DC42697497500CD0462 /* Alamofire+Custom.swift in Sources */,
 				28379A3E255A2509000750EF /* Localizable.swift in Sources */,
 				28379A36255A22E1000750EF /* Color+Custom.swift in Sources */,
 				28379A0C255A1FDC000750EF /* SceneDelegate.swift in Sources */,
 				289B3FF4255A7C2400C8D147 /* ReusableView.swift in Sources */,
-				28379A42255A25D5000750EF /* ATAPIManager.swift in Sources */,
+				28379A42255A25D5000750EF /* APIHandler.swift in Sources */,
 				28379A4E255A2A95000750EF /* ATError.swift in Sources */,
 				289B3FF0255A7BF900C8D147 /* ATCalendarViewCell.swift in Sources */,
 				289B3FF7255A7C9900C8D147 /* NibOwnerLoadable.swift in Sources */,
-				28379A5F255A2DE5000750EF /* ATResponse.swift in Sources */,
+				28DF8DC626974A8800CD0462 /* URL+Custom.swift in Sources */,
 				289B400F255AEA4000C8D147 /* Date+Custom.swift in Sources */,
 				289B3FEC255A7BDE00C8D147 /* ATCalendarView.swift in Sources */,
+				28DF8DC22697149D00CD0462 /* APIParseHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,20 +516,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		28379A48255A29B4000750EF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		28DF8DBE26970DA000CD0462 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.0;
+				minimumVersion = 5.4.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		28379A49255A29B4000750EF /* Alamofire */ = {
+		28DF8DBF26970DA000CD0462 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 28379A48255A29B4000750EF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 28DF8DBE26970DA000CD0462 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -27,23 +27,23 @@ class ATMainViewController: UIViewController {
     var canGoNextWeekkObservation: NSKeyValueObservation?
     var canGoLastWeekObservation: NSKeyValueObservation?
     var weekRangeDescriptionObservation: NSKeyValueObservation?
-    var calendar: ATResponse.Calendar?
+    var calendar: CalenderApi.Calendar?
 
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
-        ATAPIManager.shared.getCalendar { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case let .success(calendar):
-                self.calendar = calendar
-                self.calendarView.reloadCalendarView()
-            case let .failure(error):
-                print(error.localizedDescription)
-            }
-        }
+//        ATAPIManager.shared.getCalendar { [weak self] result in
+//            guard let self = self else { return }
+//            switch result {
+//            case let .success(calendar):
+//                self.calendar = calendar
+//                self.calendarView.reloadCalendarView()
+//            case let .failure(error):
+//                print(error.localizedDescription)
+//            }
+//        }
     }
 
     deinit {

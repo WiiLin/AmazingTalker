@@ -8,9 +8,9 @@ import Alamofire
 import Foundation
 
 extension Encodable {
-    var parameters: Parameters? {
+    func  parameters(keyEncodingStrategy:JSONEncoder.KeyEncodingStrategy) -> Parameters? {
         let jsonEncoder = JSONEncoder()
-        jsonEncoder.keyEncodingStrategy = .convertToSnakeCase
+        jsonEncoder.keyEncodingStrategy = keyEncodingStrategy
         guard let data = try? jsonEncoder.encode(self) else { return nil }
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? Parameters }
     }

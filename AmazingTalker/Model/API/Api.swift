@@ -20,7 +20,7 @@ protocol Api {
 
 extension Api where Self: Encodable {
     var parameters: Parameters? {
-        if let requestType = request, let parameters = requestType.parameters, !parameters.isEmpty {
+        if let requestType = request, let parameters = requestType.parameters(keyEncodingStrategy: .convertToSnakeCase), !parameters.isEmpty {
             return parameters
         } else {
             return nil

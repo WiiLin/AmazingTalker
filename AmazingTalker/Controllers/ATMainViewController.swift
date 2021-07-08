@@ -4,7 +4,7 @@
 //
 //  Created by Wii Lin on 2020/11/10.
 //
-
+import PKHUD
 import UIKit
 
 class ATMainViewController: UIViewController {
@@ -13,37 +13,21 @@ class ATMainViewController: UIViewController {
     @IBOutlet var lastWeekButton: UIButton!
     @IBOutlet var nextWeekButton: UIButton!
     @IBOutlet var weekRangeLabel: UILabel!
-    @IBOutlet var timeZoneLabel: UILabel! {
-        didSet {
-            var timeZone = TimeZone.current.identifier
-            if let abbreviation = TimeZone.current.abbreviation() {
-                timeZone += "(\(abbreviation))"
-            }
-            timeZoneLabel.text = String(format: "time_display_in".localized, timeZone)
-        }
-    }
-
+    @IBOutlet var timeZoneLabel: UILabel!
+    
     @IBOutlet var calendarView: ATCalendarView!
     var canGoNextWeekkObservation: NSKeyValueObservation?
     var canGoLastWeekObservation: NSKeyValueObservation?
     var weekRangeDescriptionObservation: NSKeyValueObservation?
-    var calendar: CalenderApi.Calendar?
+    let viewModel: ATMainViewModel = ATMainViewModel()
 
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCalendarView()
-//        ATAPIManager.shared.getCalendar { [weak self] result in
-//            guard let self = self else { return }
-//            switch result {
-//            case let .success(calendar):
-//                self.calendar = calendar
-//                self.calendarView.reloadCalendarView()
-//            case let .failure(error):
-//                print(error.localizedDescription)
-//            }
-//        }
+        setupSubViews()
+        initBinding()
+        viewModel.getCalander()
     }
 
     deinit {
@@ -56,7 +40,25 @@ class ATMainViewController: UIViewController {
 // MARK: - Privaite method
 
 private extension ATMainViewController {
-    func setupCalendarView() {
+    func initBinding() {
+        viewModel.$errorMessage(bind: self) { weakSelf, errorMessage in
+            print(errorMessage)
+        }
+
+        viewModel.$isLoading(bind: self) { weakSelf, isLoading in
+            if isLoading {
+                HUD.show(.progress, onView: weakSelf.view)
+            } else {
+                HUD.hide(animated: true)
+            }
+        }
+        viewModel.$calendar(bind: self) { weakSelf, calander in
+            weakSelf.calendarView.reloadCalendarView()
+        }
+    }
+
+    func setupSubViews() {
+        timeZoneLabel.text = String(format: "time_display_in".localized, TimeZone.current.description)
         calendarView.calendarViewDelegate = self
         canGoNextWeekkObservation = calendarView.observe(\.canGoNextWeek, options: [.new]) { [weak self] calendarView, canGoNextWeek in
             guard let self = self else { return }
@@ -85,6 +87,7 @@ private extension ATMainViewController {
 
 extension ATMainViewController: ATCalendarViewDelegate {
     func getDayTimetable(date: Date) -> [ATTimePeriod] {
+        guard let calendar = viewModel.calendar else { return [] }
         return ATTimePeriod.dayTimetable(calendar: calendar, date: date)
     }
 }

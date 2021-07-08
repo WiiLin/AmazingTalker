@@ -28,7 +28,7 @@ class APIParseHandler {
 
     func parse<ApiResponse: Decodable>(_ data: Data?,
                                        responseType: ApiResponse.Type,
-                                       completionHandler: @escaping (Result<ApiResponse, ATError>) -> Void) {
+                                       completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void) {
         if let data = data {
             do {
                 let response = try jsonDecoder.decode(responseType, from: data)

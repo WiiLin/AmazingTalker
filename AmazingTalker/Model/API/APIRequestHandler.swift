@@ -18,7 +18,7 @@ class APIRequestHandler {
 
     func request<ApiRequest: Api, ApiResponse: Decodable>(api: ApiRequest,
                                                           responseType: ApiResponse.Type,
-                                                          completionHandler: @escaping (Result<ApiResponse, ATError>) -> Void) {
+                                                          completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void) {
         guard api.testMode == false else {
             parseHandler.parse(api.path.testData, responseType: responseType, completionHandler: completionHandler)
             return
@@ -46,7 +46,7 @@ class APIRequestHandler {
         }
     }
 
-    func request(request: DataRequest, method: HTTPMethod, parameters: Parameters?, completionHandler: @escaping (Result<Data?, ATError>) -> Void) {
+    func request(request: DataRequest, method: HTTPMethod, parameters: Parameters?, completionHandler: @escaping (Result<Data?, APIError>) -> Void) {
         request
             .validate(statusCode: 200 ..< 400)
             .response { response in

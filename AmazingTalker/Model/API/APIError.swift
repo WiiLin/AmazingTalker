@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ATError: Error, Equatable {
+enum APIError: Error, Equatable {
     case apiResponseError
     case apiResponseSourceError
     case urlCreateError

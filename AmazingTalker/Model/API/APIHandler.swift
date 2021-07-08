@@ -23,7 +23,7 @@ class APIHandler {
 
     private lazy var requestHandler: APIRequestHandler = APIRequestHandler()
 
-    func getCanender(completionHandler: @escaping (Result<CalenderApi.Calendar, ATError>) -> Void) {
+    func getCanender(completionHandler: @escaping (Result<CalenderApi.Calendar, APIError>) -> Void) {
         let api = CalenderApi(testMode: true)
         requestHandler.request(api: api, responseType: CalenderApi.Calendar.self, completionHandler: completionHandler)
     }

@@ -18,7 +18,7 @@
 		28379A36255A22E1000750EF /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A35255A22E1000750EF /* Color+Custom.swift */; };
 		28379A3E255A2509000750EF /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A3D255A2509000750EF /* Localizable.swift */; };
 		28379A42255A25D5000750EF /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A41255A25D5000750EF /* APIHandler.swift */; };
-		28379A4E255A2A95000750EF /* ATError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A4D255A2A94000750EF /* ATError.swift */; };
+		28379A4E255A2A95000750EF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A4D255A2A94000750EF /* APIError.swift */; };
 		28815B5A255B7EA600B14FAE /* ATTimePeriodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28815B58255B7EA600B14FAE /* ATTimePeriodCell.swift */; };
 		28815B5B255B7EA600B14FAE /* ATTimePeriodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28815B59255B7EA600B14FAE /* ATTimePeriodCell.xib */; };
 		28991909255A443C00EF8881 /* calendar.json in Resources */ = {isa = PBXBuildFile; fileRef = 28991908255A443C00EF8881 /* calendar.json */; };
@@ -36,6 +36,10 @@
 		28DF8DC42697497500CD0462 /* Alamofire+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */; };
 		28DF8DC626974A8800CD0462 /* URL+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC526974A8800CD0462 /* URL+Custom.swift */; };
 		28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */; };
+		28DF8DCA2697534F00CD0462 /* ATMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC92697534E00CD0462 /* ATMainViewModel.swift */; };
+		28DF8DCC269754B300CD0462 /* WLObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DCB269754B300CD0462 /* WLObservable.swift */; };
+		28DF8DCF269757E500CD0462 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 28DF8DCE269757E500CD0462 /* PKHUD */; };
+		28DF8DD126975BB300CD0462 /* TimeZone+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD026975BB300CD0462 /* TimeZone+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +57,7 @@
 		28379A35255A22E1000750EF /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 		28379A3D255A2509000750EF /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		28379A41255A25D5000750EF /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		28379A4D255A2A94000750EF /* ATError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATError.swift; sourceTree = "<group>"; };
+		28379A4D255A2A94000750EF /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		28815B58255B7EA600B14FAE /* ATTimePeriodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTimePeriodCell.swift; sourceTree = "<group>"; };
 		28815B59255B7EA600B14FAE /* ATTimePeriodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATTimePeriodCell.xib; sourceTree = "<group>"; };
 		28991908255A443C00EF8881 /* calendar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendar.json; sourceTree = "<group>"; };
@@ -70,6 +74,9 @@
 		28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Custom.swift"; sourceTree = "<group>"; };
 		28DF8DC526974A8800CD0462 /* URL+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Custom.swift"; sourceTree = "<group>"; };
 		28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHandler.swift; sourceTree = "<group>"; };
+		28DF8DC92697534E00CD0462 /* ATMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMainViewModel.swift; sourceTree = "<group>"; };
+		28DF8DCB269754B300CD0462 /* WLObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLObservable.swift; sourceTree = "<group>"; };
+		28DF8DD026975BB300CD0462 /* TimeZone+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeZone+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28DF8DC026970DA000CD0462 /* Alamofire in Frameworks */,
+				28DF8DCF269757E500CD0462 /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +141,7 @@
 				289B400E255AEA4000C8D147 /* Date+Custom.swift */,
 				28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */,
 				28DF8DC526974A8800CD0462 /* URL+Custom.swift */,
+				28DF8DD026975BB300CD0462 /* TimeZone+Custom.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -151,6 +160,7 @@
 			children = (
 				28379A22255A2048000750EF /* Main.storyboard */,
 				28379A0D255A1FDC000750EF /* ATMainViewController.swift */,
+				28DF8DC92697534E00CD0462 /* ATMainViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +180,7 @@
 			children = (
 				289B4013255B77D800C8D147 /* ATDayTimetable.swift */,
 				28379A50255A2B9E000750EF /* API */,
+				28DF8DCB269754B300CD0462 /* WLObservable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,7 +193,7 @@
 				28379A41255A25D5000750EF /* APIHandler.swift */,
 				28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */,
 				28DF8DC12697149D00CD0462 /* APIParseHandler.swift */,
-				28379A4D255A2A94000750EF /* ATError.swift */,
+				28379A4D255A2A94000750EF /* APIError.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 			name = AmazingTalker;
 			packageProductDependencies = (
 				28DF8DBF26970DA000CD0462 /* Alamofire */,
+				28DF8DCE269757E500CD0462 /* PKHUD */,
 			);
 			productName = AmazingTalker;
 			productReference = 28379A06255A1FDC000750EF /* AmazingTalker.app */;
@@ -265,6 +277,7 @@
 			mainGroup = 283799FD255A1FDC000750EF;
 			packageReferences = (
 				28DF8DBE26970DA000CD0462 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				28DF8DCD269757E500CD0462 /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = 28379A07255A1FDC000750EF /* Products */;
 			projectDirPath = "";
@@ -304,14 +317,17 @@
 				28379A0E255A1FDC000750EF /* ATMainViewController.swift in Sources */,
 				28379A0A255A1FDC000750EF /* AppDelegate.swift in Sources */,
 				28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */,
+				28DF8DCA2697534F00CD0462 /* ATMainViewModel.swift in Sources */,
+				28DF8DCC269754B300CD0462 /* WLObservable.swift in Sources */,
 				289B4014255B77D800C8D147 /* ATDayTimetable.swift in Sources */,
 				28DF8DC42697497500CD0462 /* Alamofire+Custom.swift in Sources */,
 				28379A3E255A2509000750EF /* Localizable.swift in Sources */,
+				28DF8DD126975BB300CD0462 /* TimeZone+Custom.swift in Sources */,
 				28379A36255A22E1000750EF /* Color+Custom.swift in Sources */,
 				28379A0C255A1FDC000750EF /* SceneDelegate.swift in Sources */,
 				289B3FF4255A7C2400C8D147 /* ReusableView.swift in Sources */,
 				28379A42255A25D5000750EF /* APIHandler.swift in Sources */,
-				28379A4E255A2A95000750EF /* ATError.swift in Sources */,
+				28379A4E255A2A95000750EF /* APIError.swift in Sources */,
 				289B3FF0255A7BF900C8D147 /* ATCalendarViewCell.swift in Sources */,
 				289B3FF7255A7C9900C8D147 /* NibOwnerLoadable.swift in Sources */,
 				28DF8DC626974A8800CD0462 /* URL+Custom.swift in Sources */,
@@ -524,6 +540,14 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		28DF8DCD269757E500CD0462 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -531,6 +555,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 28DF8DBE26970DA000CD0462 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		28DF8DCE269757E500CD0462 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28DF8DCD269757E500CD0462 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

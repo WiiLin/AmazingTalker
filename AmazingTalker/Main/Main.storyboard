@@ -6,14 +6,13 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ATMainViewController" customModule="AmazingTalker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="AmazingTalker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,17 +54,8 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jmR-qp-Tmv">
                                 <rect key="frame" x="0.0" y="165" width="414" height="626"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewLayout key="collectionViewLayout" id="Egn-zK-SK1" customClass="ATCalendarViewLayout" customModule="AmazingTalker" customModuleProvider="target"/>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u9X-vE-3wT">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jae-mq-Lvi">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <collectionViewLayout key="collectionViewLayout" id="Egn-zK-SK1" customClass="TimetableCollectionViewLayout" customModule="AmazingTalker" customModuleProvider="target"/>
+                                <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="WzM-gV-MIv"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="AYo-6n-lAl"/>
@@ -105,10 +95,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="jmR-qp-Tmv" id="xSa-ZE-sxT"/>
                         <outlet property="lastWeekButton" destination="52B-xP-FN9" id="UAm-Gc-2o9"/>
                         <outlet property="nextWeekButton" destination="dor-z0-h23" id="tdn-iP-JTW"/>
                         <outlet property="timeZoneLabel" destination="Ezi-bW-5jk" id="eAd-bW-Q2c"/>
+                        <outlet property="timetableCollectionView" destination="jmR-qp-Tmv" id="xSa-ZE-sxT"/>
                         <outlet property="weekRangeLabel" destination="VoI-s9-k2g" id="AWb-zS-upv"/>
                     </connections>
                 </viewController>

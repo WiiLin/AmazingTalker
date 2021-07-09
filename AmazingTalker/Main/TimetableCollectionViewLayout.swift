@@ -1,5 +1,5 @@
 //
-//  ATCalendarViewLayout.swift
+//  TimetableCollectionViewLayout.swift
 //  AmazingTalker
 //
 //  Created by Wii Lin on 2021/7/9.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ATCalendarViewLayout: UICollectionViewFlowLayout {
+class TimetableCollectionViewLayout: UICollectionViewFlowLayout {
     private let column: CGFloat = 7.0
     private func configure() {
         guard let collectionView = collectionView else { return }

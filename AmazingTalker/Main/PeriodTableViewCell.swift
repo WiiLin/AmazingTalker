@@ -1,5 +1,5 @@
 //
-//  ATTimePeriodCell.swift
+//  PeriodTableViewCell.swift
 //  AmazingTalker
 //
 //  Created by Wii Lin on 2020/7/9.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ATTimePeriodCell: UITableViewCell {
+class PeriodTableViewCell: UITableViewCell {
     @IBOutlet var timeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +20,7 @@ class ATTimePeriodCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func configrure(timePeriod: ATTimePeriod) {
+    func configrure(timePeriod: Period) {
         timeLabel.text = timePeriod.range.start.string(dateFormat: "HH:mm")
         timeLabel.textColor = timePeriod.period.color
     }

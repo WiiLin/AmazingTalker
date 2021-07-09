@@ -8,5 +8,5 @@
 import Foundation
 
 protocol APIRequestable {
-    func getCanender(completionHandler: @escaping (Result<CalenderRequest.Calendar, APIError>) -> Void)
+    func getTimetable(completionHandler: @escaping (Result<Timetable, APIError>) -> Void)
 }

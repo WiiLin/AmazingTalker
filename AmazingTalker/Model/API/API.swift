@@ -8,15 +8,20 @@
 import Alamofire
 import Foundation
 
-struct CalenderRequest: Requestable, Encodable {
-    struct Calendar: Decodable {
-        let available: [ATTimePeriod.Range]
-        let booked: [ATTimePeriod.Range]
+struct Timetable: Decodable {
+    struct Range: Decodable {
+        let start: Date
+        let end: Date
     }
 
-    typealias ApiResponse = Calendar
+    let available: [Range]
+    let booked: [Range]
+}
+
+struct BookingStatusRequest: Requestable, Encodable {
+    typealias ApiResponse = Timetable
     var request: Encodable? { return self }
-    var path: APIPath { return .calendar }
+    var path: APIPath { return .bookingStatus }
     var method: HTTPMethod { return .get }
     var headers: HTTPHeaders? { return nil }
 }

@@ -10,8 +10,8 @@ import Foundation
 class FakeAPIHandler: APIRequestable {
     private lazy var parseHandler = APIParseHandler()
 
-    func getCanender(completionHandler: @escaping (Result<CalenderRequest.Calendar, APIError>) -> Void) {
-        let request = CalenderRequest()
-        parseHandler.parse(request.path.testData, responseType: CalenderRequest.Calendar.self, completionHandler: completionHandler)
+    func getTimetable(completionHandler: @escaping (Result<Timetable, APIError>) -> Void) {
+        let request = BookingStatusRequest()
+        parseHandler.parse(request.path.testData, responseType: Timetable.self, completionHandler: completionHandler)
     }
 }

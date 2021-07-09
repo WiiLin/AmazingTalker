@@ -33,7 +33,7 @@ class PeriodHandler {
 
     func configure(timetable: Timetable) {
         available = timetable.available
-        booked = timetable.available
+        booked = timetable.booked
     }
 
     func period(with date: Date) -> [Period] {

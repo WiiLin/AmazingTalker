@@ -53,7 +53,7 @@ extension DayPeriodCollectionViewCell {
 
 private extension DayPeriodCollectionViewCell {
     func configurePeriods(_ periods: [Period]) {
-        enableView.backgroundColor = !periods.isEmpty ? .enableGreen : .disableGray
+        enableView.backgroundColor = !periods.filter{ $0.period == .available }.isEmpty ? .enableGreen : .disableGray
         weekDayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
         dayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
         dataSource = periods

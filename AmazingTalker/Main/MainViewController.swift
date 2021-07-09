@@ -8,15 +8,15 @@ import PKHUD
 import UIKit
 
 class MainViewController: UIViewController {
+   
     // MARK: - IBOutlet
+    @IBOutlet private var lastWeekButton: UIButton!
+    @IBOutlet private var nextWeekButton: UIButton!
+    @IBOutlet private var weekRangeLabel: UILabel!
+    @IBOutlet private var timeZoneLabel: UILabel!
+    @IBOutlet private var timetableCollectionView: UICollectionView!
 
-    @IBOutlet var lastWeekButton: UIButton!
-    @IBOutlet var nextWeekButton: UIButton!
-    @IBOutlet var weekRangeLabel: UILabel!
-    @IBOutlet var timeZoneLabel: UILabel!
-    @IBOutlet var timetableCollectionView: UICollectionView!
-
-    lazy var viewModel: MainViewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
+    lazy private var viewModel: MainViewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
 
     // MARK: - Life Cycle
 

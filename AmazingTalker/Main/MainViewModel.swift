@@ -36,7 +36,7 @@ class MainViewModel {
     }
 }
 
-// MARK: - Interface
+// MARK: - Private Method
 
 private extension MainViewModel {
     func reloadCanGoLastWeek() {

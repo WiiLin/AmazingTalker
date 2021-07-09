@@ -8,13 +8,16 @@
 import UIKit
 
 class DayPeriodCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var enableView: UIView!
-    @IBOutlet var weekDayLabel: UILabel!
-    @IBOutlet var dayLabel: UILabel!
-    @IBOutlet var tableView: UITableView!
+    //MARK: - IBOutlet
+    @IBOutlet private var enableView: UIView!
+    @IBOutlet private var weekDayLabel: UILabel!
+    @IBOutlet private var dayLabel: UILabel!
+    @IBOutlet private var tableView: UITableView!
 
-    var dataSource: [Period] = []
+    //MARK: - Propreties
+    private var dataSource: [Period] = []
 
+    //MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         tableView.register(UINib(nibName: "\(PeriodTableViewCell.self)", bundle: nil), forCellReuseIdentifier: "\(PeriodTableViewCell.self)")
@@ -26,8 +29,13 @@ class DayPeriodCollectionViewCell: UICollectionViewCell {
         enableView.backgroundColor = .disableGray
         weekDayLabel.textColor = .disableGray
         dayLabel.textColor = .disableGray
+        dataSource.removeAll()
     }
 
+}
+
+//MARK: - Interface
+extension DayPeriodCollectionViewCell {
     func configure(_ date: Date) {
         weekDayLabel.text = date.shortWeekdaySymbol
         dayLabel.text = "\(date.day)"
@@ -35,8 +43,11 @@ class DayPeriodCollectionViewCell: UICollectionViewCell {
             configurePeriods(PeriodHandler.shared.period(with: date))
         }
     }
+}
 
-    private func configurePeriods(_ periods: [Period]) {
+// MARK: - Privaite method
+private extension DayPeriodCollectionViewCell {
+    func configurePeriods(_ periods: [Period]) {
         enableView.backgroundColor = !periods.isEmpty ? .enableGreen : .disableGray
         weekDayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
         dayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
@@ -45,6 +56,7 @@ class DayPeriodCollectionViewCell: UICollectionViewCell {
     }
 }
 
+//MARK: - UITableViewDataSource
 extension DayPeriodCollectionViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count

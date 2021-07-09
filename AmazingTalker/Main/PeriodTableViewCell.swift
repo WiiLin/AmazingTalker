@@ -8,7 +8,10 @@
 import UIKit
 
 class PeriodTableViewCell: UITableViewCell {
-    @IBOutlet var periodLabel: UILabel!
+    //MARK: - IBOutlet
+    @IBOutlet private var periodLabel: UILabel!
+    
+    //MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,7 +22,10 @@ class PeriodTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+}
+ 
+//MARK: - Interface
+extension PeriodTableViewCell{
     func configrure(period: Period) {
         periodLabel.text = period.range.start.string(dateFormat: "HH:mm")
         periodLabel.textColor = period.period.color

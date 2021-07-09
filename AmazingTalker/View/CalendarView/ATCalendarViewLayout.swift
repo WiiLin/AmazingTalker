@@ -8,8 +8,8 @@
 import UIKit
 
 class ATCalendarViewLayout: UICollectionViewFlowLayout {
-    var column: CGFloat = 7.0
-    func configure() {
+    private let column: CGFloat = 7.0
+    private func configure() {
         guard let collectionView = collectionView else { return }
         scrollDirection = .vertical
         minimumInteritemSpacing = 5

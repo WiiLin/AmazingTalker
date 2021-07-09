@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ATCalendarViewCell: UICollectionViewCell {
+class ATDayPeriodCell: UICollectionViewCell {
     @IBOutlet var enableView: UIView!
     @IBOutlet var weekDayLabel: UILabel!
     @IBOutlet var dayLabel: UILabel!
@@ -45,7 +45,7 @@ class ATCalendarViewCell: UICollectionViewCell {
     }
 }
 
-extension ATCalendarViewCell: UITableViewDataSource {
+extension ATDayPeriodCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }

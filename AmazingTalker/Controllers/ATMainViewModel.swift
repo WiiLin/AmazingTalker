@@ -17,8 +17,7 @@ class ATMainViewModel {
     init(apiRequestable: APIRequestable) {
         self.apiRequestable = apiRequestable
     }
-    
-    
+
     func getCalander() {
         isLoading = true
         apiRequestable.getCanender { [weak self] result in

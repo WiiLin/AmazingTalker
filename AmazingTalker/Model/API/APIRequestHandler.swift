@@ -15,12 +15,10 @@ class APIRequestHandler {
         session.session.configuration.timeoutIntervalForRequest = 60
         return session
     }()
-    
 
     func request<ApiRequest: Requestable, ApiResponse: Decodable>(_ apiRequest: ApiRequest,
-                                                          responseType: ApiResponse.Type,
-                                                          completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void) {
-
+                                                                  responseType: ApiResponse.Type,
+                                                                  completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void) {
         guard let url = URL.apiUrl(path: apiRequest.path) else {
             completionHandler(.failure(.urlCreateError))
             return

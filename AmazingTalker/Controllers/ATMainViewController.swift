@@ -14,7 +14,7 @@ class ATMainViewController: UIViewController {
     @IBOutlet var nextWeekButton: UIButton!
     @IBOutlet var weekRangeLabel: UILabel!
     @IBOutlet var timeZoneLabel: UILabel!
-    
+
     @IBOutlet var calendarView: ATCalendarView!
     var canGoNextWeekkObservation: NSKeyValueObservation?
     var canGoLastWeekObservation: NSKeyValueObservation?

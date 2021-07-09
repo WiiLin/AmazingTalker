@@ -23,11 +23,9 @@ class APIHandler: APIRequestable {
 
 class FakeAPIHandler: APIRequestable {
     private lazy var parseHandler = APIParseHandler()
-    
+
     func getCanender(completionHandler: @escaping (Result<CalenderRequest.Calendar, APIError>) -> Void) {
         let request = CalenderRequest()
         parseHandler.parse(request.path.testData, responseType: CalenderRequest.Calendar.self, completionHandler: completionHandler)
     }
-    
-    
 }

@@ -2,7 +2,7 @@
 //  Date+Custom.swift
 //  AmazingTalker
 //
-//  Created by Wii Lin on 2020/11/10.
+//  Created by Wii Lin on 2021/7/9.
 //
 
 import Foundation
@@ -55,7 +55,7 @@ extension Date {
         }
     }
 
-    static func weekDateRange(date: Date) -> [Date] {
+    static func weekDate(of date: Date) -> [Date] {
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: date)
         let dayOfWeek = calendar.component(.weekday, from: today)

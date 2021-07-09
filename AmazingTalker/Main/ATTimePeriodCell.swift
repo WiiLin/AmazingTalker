@@ -2,7 +2,7 @@
 //  ATTimePeriodCell.swift
 //  AmazingTalker
 //
-//  Created by Wii Lin on 2020/11/11.
+//  Created by Wii Lin on 2020/7/9.
 //
 
 import UIKit

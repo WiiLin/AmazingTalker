@@ -22,7 +22,6 @@
 		28815B5A255B7EA600B14FAE /* ATTimePeriodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28815B58255B7EA600B14FAE /* ATTimePeriodCell.swift */; };
 		28815B5B255B7EA600B14FAE /* ATTimePeriodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28815B59255B7EA600B14FAE /* ATTimePeriodCell.xib */; };
 		28991909255A443C00EF8881 /* calendar.json in Resources */ = {isa = PBXBuildFile; fileRef = 28991908255A443C00EF8881 /* calendar.json */; };
-		289B3FEC255A7BDE00C8D147 /* ATCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FEB255A7BDE00C8D147 /* ATCalendarView.swift */; };
 		289B3FF0255A7BF900C8D147 /* ATDayPeriodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FEE255A7BF900C8D147 /* ATDayPeriodCell.swift */; };
 		289B3FF1255A7BF900C8D147 /* ATDayPeriodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289B3FEF255A7BF900C8D147 /* ATDayPeriodCell.xib */; };
 		289B4000255A83B800C8D147 /* ATCalendarViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */; };
@@ -38,7 +37,6 @@
 		28DF8DCC269754B300CD0462 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DCB269754B300CD0462 /* Observable.swift */; };
 		28DF8DCF269757E500CD0462 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 28DF8DCE269757E500CD0462 /* PKHUD */; };
 		28DF8DD126975BB300CD0462 /* TimeZone+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD026975BB300CD0462 /* TimeZone+Custom.swift */; };
-		28DF8DD32697F5D400CD0462 /* ATCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD22697F5D400CD0462 /* ATCalendarViewModel.swift */; };
 		28DF8DD52697FADD00CD0462 /* APIRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD42697FADD00CD0462 /* APIRequestable.swift */; };
 		28DF8DD72697FB1C00CD0462 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD62697FB1C00CD0462 /* Requestable.swift */; };
 		28DF8DDA2697FC1B00CD0462 /* FakeAPIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD92697FC1B00CD0462 /* FakeAPIHandler.swift */; };
@@ -64,7 +62,6 @@
 		28815B58255B7EA600B14FAE /* ATTimePeriodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTimePeriodCell.swift; sourceTree = "<group>"; };
 		28815B59255B7EA600B14FAE /* ATTimePeriodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATTimePeriodCell.xib; sourceTree = "<group>"; };
 		28991908255A443C00EF8881 /* calendar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendar.json; sourceTree = "<group>"; };
-		289B3FEB255A7BDE00C8D147 /* ATCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCalendarView.swift; sourceTree = "<group>"; };
 		289B3FEE255A7BF900C8D147 /* ATDayPeriodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDayPeriodCell.swift; sourceTree = "<group>"; };
 		289B3FEF255A7BF900C8D147 /* ATDayPeriodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ATDayPeriodCell.xib; sourceTree = "<group>"; };
 		289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCalendarViewLayout.swift; sourceTree = "<group>"; };
@@ -78,7 +75,6 @@
 		28DF8DC92697534E00CD0462 /* ATMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMainViewModel.swift; sourceTree = "<group>"; };
 		28DF8DCB269754B300CD0462 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		28DF8DD026975BB300CD0462 /* TimeZone+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeZone+Custom.swift"; sourceTree = "<group>"; };
-		28DF8DD22697F5D400CD0462 /* ATCalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCalendarViewModel.swift; sourceTree = "<group>"; };
 		28DF8DD42697FADD00CD0462 /* APIRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestable.swift; sourceTree = "<group>"; };
 		28DF8DD62697FB1C00CD0462 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		28DF8DD92697FC1B00CD0462 /* FakeAPIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIHandler.swift; sourceTree = "<group>"; };
@@ -117,13 +113,12 @@
 		28379A08255A1FDC000750EF /* AmazingTalker */ = {
 			isa = PBXGroup;
 			children = (
-				28379A39255A232A000750EF /* Controllers */,
+				28379A39255A232A000750EF /* Main */,
 				28379A38255A231B000750EF /* Delegate */,
 				28379A34255A22D1000750EF /* Extension */,
 				28379A40255A25BF000750EF /* Model */,
 				28379A3C255A24EB000750EF /* Procotol */,
 				28379A27255A20C3000750EF /* Resource */,
-				289B3FDF255A7B4500C8D147 /* View */,
 				28379A17255A1FDD000750EF /* Info.plist */,
 				28379A21255A2048000750EF /* LaunchScreen.storyboard */,
 			);
@@ -161,14 +156,19 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		28379A39255A232A000750EF /* Controllers */ = {
+		28379A39255A232A000750EF /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				28379A0D255A1FDC000750EF /* ATMainViewController.swift */,
 				28DF8DC92697534E00CD0462 /* ATMainViewModel.swift */,
+				289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */,
+				289B3FEE255A7BF900C8D147 /* ATDayPeriodCell.swift */,
+				289B3FEF255A7BF900C8D147 /* ATDayPeriodCell.xib */,
+				28815B58255B7EA600B14FAE /* ATTimePeriodCell.swift */,
+				28815B59255B7EA600B14FAE /* ATTimePeriodCell.xib */,
 				28379A22255A2048000750EF /* Main.storyboard */,
 			);
-			path = Controllers;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		28379A3C255A24EB000750EF /* Procotol */ = {
@@ -211,28 +211,6 @@
 				28991908255A443C00EF8881 /* calendar.json */,
 			);
 			path = TestCase;
-			sourceTree = "<group>";
-		};
-		289B3FDF255A7B4500C8D147 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				289B3FE8255A7BAF00C8D147 /* CalendarView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		289B3FE8255A7BAF00C8D147 /* CalendarView */ = {
-			isa = PBXGroup;
-			children = (
-				289B3FEB255A7BDE00C8D147 /* ATCalendarView.swift */,
-				289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */,
-				28DF8DD22697F5D400CD0462 /* ATCalendarViewModel.swift */,
-				289B3FEE255A7BF900C8D147 /* ATDayPeriodCell.swift */,
-				289B3FEF255A7BF900C8D147 /* ATDayPeriodCell.xib */,
-				28815B58255B7EA600B14FAE /* ATTimePeriodCell.swift */,
-				28815B59255B7EA600B14FAE /* ATTimePeriodCell.xib */,
-			);
-			path = CalendarView;
 			sourceTree = "<group>";
 		};
 		28DF8DD82697FC1300CD0462 /* Fake */ = {
@@ -337,9 +315,7 @@
 				28DF8DD52697FADD00CD0462 /* APIRequestable.swift in Sources */,
 				28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */,
 				28379A0A255A1FDC000750EF /* AppDelegate.swift in Sources */,
-				289B3FEC255A7BDE00C8D147 /* ATCalendarView.swift in Sources */,
 				289B4000255A83B800C8D147 /* ATCalendarViewLayout.swift in Sources */,
-				28DF8DD32697F5D400CD0462 /* ATCalendarViewModel.swift in Sources */,
 				289B3FF0255A7BF900C8D147 /* ATDayPeriodCell.swift in Sources */,
 				289B4014255B77D800C8D147 /* ATDayTimetable.swift in Sources */,
 				28379A0E255A1FDC000750EF /* ATMainViewController.swift in Sources */,

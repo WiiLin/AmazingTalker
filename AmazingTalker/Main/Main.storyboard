@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -51,10 +52,25 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="teaching_time"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGo-fS-Y1s" customClass="ATCalendarView" customModule="AmazingTalker" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jmR-qp-Tmv">
                                 <rect key="frame" x="0.0" y="165" width="414" height="626"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Egn-zK-SK1" customClass="ATCalendarViewLayout" customModule="AmazingTalker" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u9X-vE-3wT">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jae-mq-Lvi">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WzM-gV-MIv"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AYo-6n-lAl"/>
+                                </connections>
+                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52B-xP-FN9">
                                 <rect key="frame" x="20" y="105" width="30" height="30"/>
                                 <color key="backgroundColor" name="Disable Gray"/>
@@ -74,22 +90,22 @@
                         <constraints>
                             <constraint firstItem="VoI-s9-k2g" firstAttribute="centerY" secondItem="dor-z0-h23" secondAttribute="centerY" id="2BB-DZ-h1Y"/>
                             <constraint firstItem="dor-z0-h23" firstAttribute="leading" secondItem="52B-xP-FN9" secondAttribute="trailing" constant="20" id="2NL-Yb-SPD"/>
-                            <constraint firstItem="lGo-fS-Y1s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5DL-o7-oWj"/>
                             <constraint firstItem="dor-z0-h23" firstAttribute="top" secondItem="52B-xP-FN9" secondAttribute="top" id="6t9-su-gKM"/>
                             <constraint firstItem="52B-xP-FN9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ECg-6E-6Ab"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lGo-fS-Y1s" secondAttribute="trailing" id="Nha-NF-aIA"/>
                             <constraint firstItem="fRQ-Pg-e65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rhc-SS-p4a"/>
+                            <constraint firstItem="Ezi-bW-5jk" firstAttribute="top" secondItem="jmR-qp-Tmv" secondAttribute="bottom" constant="30" id="SCL-7B-x6f"/>
                             <constraint firstItem="VoI-s9-k2g" firstAttribute="leading" secondItem="dor-z0-h23" secondAttribute="trailing" constant="20" id="ayy-nD-dkI"/>
+                            <constraint firstItem="jmR-qp-Tmv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eeM-yN-m08"/>
                             <constraint firstItem="52B-xP-FN9" firstAttribute="top" secondItem="fRQ-Pg-e65" secondAttribute="bottom" constant="20" id="em8-hp-g9I"/>
+                            <constraint firstItem="jmR-qp-Tmv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gg4-mK-ytM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ezi-bW-5jk" secondAttribute="trailing" constant="20" id="kxY-0v-c9x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ezi-bW-5jk" secondAttribute="bottom" constant="20" id="n3i-1U-tK0"/>
-                            <constraint firstItem="Ezi-bW-5jk" firstAttribute="top" secondItem="lGo-fS-Y1s" secondAttribute="bottom" constant="30" id="pDj-7M-NhY"/>
-                            <constraint firstItem="lGo-fS-Y1s" firstAttribute="top" secondItem="dor-z0-h23" secondAttribute="bottom" constant="30" id="vRt-mD-JFR"/>
+                            <constraint firstItem="jmR-qp-Tmv" firstAttribute="top" secondItem="dor-z0-h23" secondAttribute="bottom" constant="30" id="sp7-D6-yjh"/>
                             <constraint firstItem="fRQ-Pg-e65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xyK-Of-5DP"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="calendarView" destination="lGo-fS-Y1s" id="FC5-zc-Rw0"/>
+                        <outlet property="collectionView" destination="jmR-qp-Tmv" id="xSa-ZE-sxT"/>
                         <outlet property="lastWeekButton" destination="52B-xP-FN9" id="UAm-Gc-2o9"/>
                         <outlet property="nextWeekButton" destination="dor-z0-h23" id="tdn-iP-JTW"/>
                         <outlet property="timeZoneLabel" destination="Ezi-bW-5jk" id="eAd-bW-Q2c"/>

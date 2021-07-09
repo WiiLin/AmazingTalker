@@ -115,14 +115,15 @@
 		28379A08255A1FDC000750EF /* AmazingTalker */ = {
 			isa = PBXGroup;
 			children = (
-				28379A38255A231B000750EF /* Delegate */,
 				28379A34255A22D1000750EF /* Extension */,
 				28379A39255A232A000750EF /* Main */,
 				28379A40255A25BF000750EF /* Model */,
 				28379A3C255A24EB000750EF /* Procotol */,
 				28379A27255A20C3000750EF /* Resource */,
+				28379A09255A1FDC000750EF /* AppDelegate.swift */,
 				28379A17255A1FDD000750EF /* Info.plist */,
 				28379A21255A2048000750EF /* LaunchScreen.storyboard */,
+				28379A0B255A1FDC000750EF /* SceneDelegate.swift */,
 			);
 			path = AmazingTalker;
 			sourceTree = "<group>";
@@ -147,15 +148,6 @@
 				28DF8DC526974A8800CD0462 /* URL+Custom.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		28379A38255A231B000750EF /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				28379A09255A1FDC000750EF /* AppDelegate.swift */,
-				28379A0B255A1FDC000750EF /* SceneDelegate.swift */,
-			);
-			path = Delegate;
 			sourceTree = "<group>";
 		};
 		28379A39255A232A000750EF /* Main */ = {
@@ -292,13 +284,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				28379A2D255A20C3000750EF /* Assets.xcassets in Resources */,
-				28991909255A443C00EF8881 /* timetable.json in Resources */,
 				28379A32255A21E9000750EF /* Colors.xcassets in Resources */,
 				289B3FF1255A7BF900C8D147 /* DayPeriodCollectionViewCell.xib in Resources */,
 				28379A23255A2048000750EF /* LaunchScreen.storyboard in Resources */,
 				28379A2C255A20C3000750EF /* Localizable.strings in Resources */,
 				28379A24255A2048000750EF /* Main.storyboard in Resources */,
 				28815B5B255B7EA600B14FAE /* PeriodTableViewCell.xib in Resources */,
+				28991909255A443C00EF8881 /* timetable.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

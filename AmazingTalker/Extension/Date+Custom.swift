@@ -45,15 +45,15 @@ extension Date {
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: self)
     }
-
-    var isPastDays: Bool {
-        let todayDate = Date()
-        if inSameDayAs(todayDate) {
+    
+    func moreThanOrEqualTo(_ date: Date) -> Bool{
+        if inSameDayAs(date) {
             return true
         } else {
-            return self > todayDate
+            return self > date
         }
     }
+
 
     static func weekDate(of date: Date) -> [Date] {
         let calendar = Calendar.current

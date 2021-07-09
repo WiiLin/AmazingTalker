@@ -40,7 +40,7 @@ class MainViewModel {
 
 private extension MainViewModel {
     func reloadCanGoLastWeek() {
-        if let lastWeekDay = week.first.addDay(-Date.weekDayCount), let lastWeekDayLast = Date.weekDate(of: lastWeekDay).last, lastWeekDayLast.isPastDays {
+        if let lastWeekDay = week.first.addDay(-Date.weekDayCount), let lastWeekDayLast = Date.weekDate(of: lastWeekDay).last, lastWeekDayLast.moreThanOrEqualTo(Date()) {
             canGoLastWeek = true
         } else {
             canGoLastWeek = false

@@ -31,7 +31,7 @@ class DayPeriodCollectionViewCell: UICollectionViewCell {
     func configure(_ date: Date) {
         weekDayLabel.text = date.shortWeekdaySymbol
         dayLabel.text = "\(date.day)"
-        if date.isPastDays {
+        if date.moreThanOrEqualTo(Date()) {
             configurePeriods(PeriodHandler.shared.period(with: date))
         }
     }

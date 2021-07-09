@@ -21,7 +21,7 @@
 		28379A4E255A2A95000750EF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A4D255A2A94000750EF /* APIError.swift */; };
 		28815B5A255B7EA600B14FAE /* PeriodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28815B58255B7EA600B14FAE /* PeriodTableViewCell.swift */; };
 		28815B5B255B7EA600B14FAE /* PeriodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28815B59255B7EA600B14FAE /* PeriodTableViewCell.xib */; };
-		28991909255A443C00EF8881 /* bookingStatus.json in Resources */ = {isa = PBXBuildFile; fileRef = 28991908255A443C00EF8881 /* bookingStatus.json */; };
+		28991909255A443C00EF8881 /* timetable.json in Resources */ = {isa = PBXBuildFile; fileRef = 28991908255A443C00EF8881 /* timetable.json */; };
 		289B3FF0255A7BF900C8D147 /* DayPeriodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FEE255A7BF900C8D147 /* DayPeriodCollectionViewCell.swift */; };
 		289B3FF1255A7BF900C8D147 /* DayPeriodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289B3FEF255A7BF900C8D147 /* DayPeriodCollectionViewCell.xib */; };
 		289B4000255A83B800C8D147 /* TimetableCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FFF255A83B800C8D147 /* TimetableCollectionViewLayout.swift */; };
@@ -62,7 +62,7 @@
 		28379A4D255A2A94000750EF /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		28815B58255B7EA600B14FAE /* PeriodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodTableViewCell.swift; sourceTree = "<group>"; };
 		28815B59255B7EA600B14FAE /* PeriodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeriodTableViewCell.xib; sourceTree = "<group>"; };
-		28991908255A443C00EF8881 /* bookingStatus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookingStatus.json; sourceTree = "<group>"; };
+		28991908255A443C00EF8881 /* timetable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timetable.json; sourceTree = "<group>"; };
 		289B3FEE255A7BF900C8D147 /* DayPeriodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPeriodCollectionViewCell.swift; sourceTree = "<group>"; };
 		289B3FEF255A7BF900C8D147 /* DayPeriodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayPeriodCollectionViewCell.xib; sourceTree = "<group>"; };
 		289B3FFF255A83B800C8D147 /* TimetableCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 		28991907255A440A00EF8881 /* TestCase */ = {
 			isa = PBXGroup;
 			children = (
-				28991908255A443C00EF8881 /* bookingStatus.json */,
+				28991908255A443C00EF8881 /* timetable.json */,
 			);
 			path = TestCase;
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28379A2D255A20C3000750EF /* Assets.xcassets in Resources */,
-				28991909255A443C00EF8881 /* bookingStatus.json in Resources */,
+				28991909255A443C00EF8881 /* timetable.json in Resources */,
 				28379A32255A21E9000750EF /* Colors.xcassets in Resources */,
 				289B3FF1255A7BF900C8D147 /* DayPeriodCollectionViewCell.xib in Resources */,
 				28379A23255A2048000750EF /* LaunchScreen.storyboard in Resources */,

@@ -32,11 +32,11 @@ class DayPeriodCollectionViewCell: UICollectionViewCell {
         weekDayLabel.text = date.shortWeekdaySymbol
         dayLabel.text = "\(date.day)"
         if date.isPastDays {
-            configureDayTimetable(PeriodHandler.shared.period(with: date))
+            configurePeriods(PeriodHandler.shared.period(with: date))
         }
     }
 
-    func configureDayTimetable(_ periods: [Period]) {
+    private func configurePeriods(_ periods: [Period]) {
         enableView.backgroundColor = !periods.isEmpty ? .enableGreen : .disableGray
         weekDayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
         dayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
@@ -52,7 +52,7 @@ extension DayPeriodCollectionViewCell: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(PeriodTableViewCell.self)", for: indexPath) as! PeriodTableViewCell
-        cell.configrure(timePeriod: dataSource[indexPath.row])
+        cell.configrure(period: dataSource[indexPath.row])
         return cell
     }
 }

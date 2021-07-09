@@ -8,7 +8,7 @@
 import Foundation
 
 enum APIPath: String {
-    case bookingStatus
+    case timetable
     var path: String {
         return rawValue
     }

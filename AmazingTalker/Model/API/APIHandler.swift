@@ -11,7 +11,7 @@ class APIHandler: APIRequestable {
     private lazy var requestHandler: APIRequestHandler = APIRequestHandler()
 
     func getTimetable(completionHandler: @escaping (Result<Timetable, APIError>) -> Void) {
-        let request = BookingStatusRequest()
+        let request = TimetableRequest()
         requestHandler.request(request, responseType: Timetable.self, completionHandler: completionHandler)
     }
 }

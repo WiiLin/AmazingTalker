@@ -18,7 +18,7 @@ class MainViewModelTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
+
     func testIsLoading() {
         expectation = expectation(description: "apiExpectation")
         let viewModel: MainViewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
@@ -28,26 +28,19 @@ class MainViewModelTests: XCTestCase {
         waitForExpectations(timeout: 1)
         XCTAssertFalse(viewModel.isLoading)
     }
-    
-    
+
     func testWeekMove() {
         let viewModel: MainViewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
         XCTAssertFalse(viewModel.canGoLastWeek)
         XCTAssertTrue(viewModel.canGoNextWeek)
     }
-
-
-
 }
+
 extension MainViewModelTests: MainViewModelDelegate {
-    func didChangeWeek() {
-        
-    }
-    
+    func didChangeWeek() {}
+
     func didFinishedLoadTimetable() {
         expectation?.fulfill()
         expectation = nil
     }
-    
-    
 }

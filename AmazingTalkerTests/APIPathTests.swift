@@ -9,7 +9,6 @@
 import XCTest
 
 class APIPathTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -21,5 +20,4 @@ class APIPathTests: XCTestCase {
     func testAPITestData() {
         XCTAssertNotNil(APIPath.timetable.testData)
     }
-
 }

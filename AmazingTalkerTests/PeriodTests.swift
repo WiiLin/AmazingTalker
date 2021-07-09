@@ -9,7 +9,6 @@
 import XCTest
 
 class PeriodTests: XCTestCase {
-
     private let apiRequestable: APIRequestable = FakeAPIHandler()
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,7 +22,7 @@ class PeriodTests: XCTestCase {
         let apiExpectation = expectation(description: "apiExpectation")
         apiRequestable.getTimetable { result in
             switch result {
-            case let  .success(timetable):
+            case let .success(timetable):
                 let handler = PeriodHandler()
                 handler.configure(timetable: timetable)
                 XCTAssertTrue(handler.available.count > 0)
@@ -40,5 +39,4 @@ class PeriodTests: XCTestCase {
             }
         }
     }
-
 }

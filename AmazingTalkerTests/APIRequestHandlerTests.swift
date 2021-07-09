@@ -17,28 +17,26 @@ class APIRequestHandlerTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
+
     /* for real environment
-    func testRequest() {
-        let apiExpectation = expectation(description: "apiExpectation")
-        let request = TimetableRequest()
-        requestHandler.request(request, responseType: Timetable.self) { result in
-            switch result {
-            case .success:
-                XCTAssertTrue(true)
-            case let .failure(error):
-                print(error.description)
-                XCTAssertTrue(false)
-            }
-            apiExpectation.fulfill()
-        }
-        waitForExpectations(timeout: 20) { error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-        }
-    }
-  */
-
-
+     func testRequest() {
+         let apiExpectation = expectation(description: "apiExpectation")
+         let request = TimetableRequest()
+         requestHandler.request(request, responseType: Timetable.self) { result in
+             switch result {
+             case .success:
+                 XCTAssertTrue(true)
+             case let .failure(error):
+                 print(error.description)
+                 XCTAssertTrue(false)
+             }
+             apiExpectation.fulfill()
+         }
+         waitForExpectations(timeout: 20) { error in
+             if let error = error {
+                 print("Error: \(error.localizedDescription)")
+             }
+         }
+     }
+     */
 }

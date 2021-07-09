@@ -9,7 +9,6 @@
 import XCTest
 
 class WeekTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -24,7 +23,7 @@ class WeekTests: XCTestCase {
         XCTAssertNotNil(week.first)
         XCTAssertNotNil(week.last)
     }
-    
+
     func testGoLastWeek() {
         let week = Week(date: Date())
         let first = week.first
@@ -33,7 +32,7 @@ class WeekTests: XCTestCase {
         XCTAssertTrue(first?.addDay(-7)?.inSameDayAs(week.first) ?? false)
         XCTAssertTrue(last?.addDay(-7)?.inSameDayAs(week.last) ?? false)
     }
-    
+
     func testGoNextWeek() {
         let week = Week(date: Date())
         let first = week.first
@@ -42,5 +41,4 @@ class WeekTests: XCTestCase {
         XCTAssertTrue(first?.addDay(7)?.inSameDayAs(week.first) ?? false)
         XCTAssertTrue(last?.addDay(7)?.inSameDayAs(week.last) ?? false)
     }
-
 }

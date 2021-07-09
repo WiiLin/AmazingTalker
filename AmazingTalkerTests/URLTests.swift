@@ -9,7 +9,6 @@
 import XCTest
 
 class URLTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -20,7 +19,6 @@ class URLTests: XCTestCase {
 
     func testURLNotNil() throws {
         XCTAssertNotNil(URL.apiHost)
-        XCTAssertNotNil(URL.apiURL(path:.timetable))
+        XCTAssertNotNil(URL.apiURL(path: .timetable))
     }
-
 }

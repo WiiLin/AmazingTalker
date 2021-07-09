@@ -261,17 +261,17 @@
 		28DF8DE62698CBD000CD0462 /* AmazingTalkerTests */ = {
 			isa = PBXGroup;
 			children = (
-				28DF8DE92698CBD000CD0462 /* Info.plist */,
-				28DF8DEF2698CC5200CD0462 /* ColorTests.swift */,
-				28DF8DF12698CD0400CD0462 /* URLTests.swift */,
-				28DF8DF32698CD7600CD0462 /* APIRequestHandlerTests.swift */,
-				28DF8DF52698CEB800CD0462 /* APIParseHandlerTests.swift */,
 				28DF8DF72698CFED00CD0462 /* APIHandlerTests.swift */,
-				28DF8DF92698D08C00CD0462 /* DateTests.swift */,
+				28DF8DF52698CEB800CD0462 /* APIParseHandlerTests.swift */,
 				28DF8DFB2698D3A300CD0462 /* APIPathTests.swift */,
-				28DF8DFD2698D44200CD0462 /* WeekTests.swift */,
-				28DF8DFF2698D6A000CD0462 /* PeriodTests.swift */,
+				28DF8DF32698CD7600CD0462 /* APIRequestHandlerTests.swift */,
+				28DF8DEF2698CC5200CD0462 /* ColorTests.swift */,
+				28DF8DF92698D08C00CD0462 /* DateTests.swift */,
+				28DF8DE92698CBD000CD0462 /* Info.plist */,
 				28DF8E012698D73D00CD0462 /* MainViewModelTests.swift */,
+				28DF8DFF2698D6A000CD0462 /* PeriodTests.swift */,
+				28DF8DF12698CD0400CD0462 /* URLTests.swift */,
+				28DF8DFD2698D44200CD0462 /* WeekTests.swift */,
 			);
 			path = AmazingTalkerTests;
 			sourceTree = "<group>";
@@ -422,16 +422,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28DF8DF02698CC5200CD0462 /* ColorTests.swift in Sources */,
-				28DF8DFE2698D44200CD0462 /* WeekTests.swift in Sources */,
-				28DF8DFA2698D08C00CD0462 /* DateTests.swift in Sources */,
-				28DF8DFC2698D3A300CD0462 /* APIPathTests.swift in Sources */,
-				28DF8DF22698CD0400CD0462 /* URLTests.swift in Sources */,
-				28DF8DF42698CD7600CD0462 /* APIRequestHandlerTests.swift in Sources */,
 				28DF8DF82698CFED00CD0462 /* APIHandlerTests.swift in Sources */,
 				28DF8DF62698CEB800CD0462 /* APIParseHandlerTests.swift in Sources */,
-				28DF8E002698D6A000CD0462 /* PeriodTests.swift in Sources */,
+				28DF8DFC2698D3A300CD0462 /* APIPathTests.swift in Sources */,
+				28DF8DF42698CD7600CD0462 /* APIRequestHandlerTests.swift in Sources */,
+				28DF8DF02698CC5200CD0462 /* ColorTests.swift in Sources */,
+				28DF8DFA2698D08C00CD0462 /* DateTests.swift in Sources */,
 				28DF8E022698D73D00CD0462 /* MainViewModelTests.swift in Sources */,
+				28DF8E002698D6A000CD0462 /* PeriodTests.swift in Sources */,
+				28DF8DF22698CD0400CD0462 /* URLTests.swift in Sources */,
+				28DF8DFE2698D44200CD0462 /* WeekTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,16 +8,19 @@
 import UIKit
 
 class DayPeriodCollectionViewCell: UICollectionViewCell {
-    //MARK: - IBOutlet
+    // MARK: - IBOutlet
+
     @IBOutlet private var enableView: UIView!
     @IBOutlet private var weekDayLabel: UILabel!
     @IBOutlet private var dayLabel: UILabel!
     @IBOutlet private var tableView: UITableView!
 
-    //MARK: - Propreties
+    // MARK: - Propreties
+
     private var dataSource: [Period] = []
 
-    //MARK: - Life Cycle
+    // MARK: - Life Cycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
         tableView.register(UINib(nibName: "\(PeriodTableViewCell.self)", bundle: nil), forCellReuseIdentifier: "\(PeriodTableViewCell.self)")
@@ -31,10 +34,10 @@ class DayPeriodCollectionViewCell: UICollectionViewCell {
         dayLabel.textColor = .disableGray
         dataSource.removeAll()
     }
-
 }
 
-//MARK: - Interface
+// MARK: - Interface
+
 extension DayPeriodCollectionViewCell {
     func configure(_ date: Date) {
         weekDayLabel.text = date.shortWeekdaySymbol
@@ -46,6 +49,7 @@ extension DayPeriodCollectionViewCell {
 }
 
 // MARK: - Privaite method
+
 private extension DayPeriodCollectionViewCell {
     func configurePeriods(_ periods: [Period]) {
         enableView.backgroundColor = !periods.isEmpty ? .enableGreen : .disableGray
@@ -56,7 +60,8 @@ private extension DayPeriodCollectionViewCell {
     }
 }
 
-//MARK: - UITableViewDataSource
+// MARK: - UITableViewDataSource
+
 extension DayPeriodCollectionViewCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count

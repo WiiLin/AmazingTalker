@@ -45,15 +45,14 @@ extension Date {
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: self)
     }
-    
-    func moreThanOrEqualTo(_ date: Date) -> Bool{
+
+    func moreThanOrEqualTo(_ date: Date) -> Bool {
         if inSameDayAs(date) {
             return true
         } else {
             return self > date
         }
     }
-
 
     static func weekDate(of date: Date) -> [Date] {
         let calendar = Calendar.current

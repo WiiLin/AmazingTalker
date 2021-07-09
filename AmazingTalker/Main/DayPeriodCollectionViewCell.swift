@@ -45,6 +45,7 @@ extension DayPeriodCollectionViewCell {
         if date.moreThanOrEqualTo(Date()) {
             configurePeriods(PeriodHandler.shared.period(with: date))
         }
+        tableView.reloadData()
     }
 }
 
@@ -56,7 +57,6 @@ private extension DayPeriodCollectionViewCell {
         weekDayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
         dayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
         dataSource = periods
-        tableView.reloadData()
     }
 }
 

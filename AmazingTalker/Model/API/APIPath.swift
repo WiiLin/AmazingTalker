@@ -10,11 +10,11 @@ import Foundation
 enum APIPath: String {
     case timetable
     var path: String {
-        return rawValue
+        return "/" + rawValue
     }
 
     var testData: Data? {
-        guard let path = Bundle.main.path(forResource: path, ofType: "json") else { return nil }
+        guard let path = Bundle.main.path(forResource: rawValue, ofType: "json") else { return nil }
         return try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
     }
 }

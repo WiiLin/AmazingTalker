@@ -10,9 +10,9 @@ import Foundation
 extension URL {
     static let apiHost: URL = URL(string: "https://api.amazingtalker.com")!
 
-    static func apiUrl(path: APIPath) -> URL? {
+    static func apiURL(path: APIPath) -> URL? {
         if var urlComponents: URLComponents = URLComponents(url: apiHost, resolvingAgainstBaseURL: true) {
-            urlComponents.path = path.rawValue
+            urlComponents.path = path.path
             return urlComponents.url
         } else {
             return nil

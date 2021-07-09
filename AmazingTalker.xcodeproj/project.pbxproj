@@ -42,7 +42,27 @@
 		28DF8DDC2697FC8A00CD0462 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DDB2697FC8A00CD0462 /* APIPath.swift */; };
 		28DF8DDE2698425700CD0462 /* PeriodHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DDD2698425700CD0462 /* PeriodHandler.swift */; };
 		28DF8DE02698987B00CD0462 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DDF2698987B00CD0462 /* Week.swift */; };
+		28DF8DF02698CC5200CD0462 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DEF2698CC5200CD0462 /* ColorTests.swift */; };
+		28DF8DF22698CD0400CD0462 /* URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DF12698CD0400CD0462 /* URLTests.swift */; };
+		28DF8DF42698CD7600CD0462 /* APIRequestHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DF32698CD7600CD0462 /* APIRequestHandlerTests.swift */; };
+		28DF8DF62698CEB800CD0462 /* APIParseHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DF52698CEB800CD0462 /* APIParseHandlerTests.swift */; };
+		28DF8DF82698CFED00CD0462 /* APIHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DF72698CFED00CD0462 /* APIHandlerTests.swift */; };
+		28DF8DFA2698D08C00CD0462 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DF92698D08C00CD0462 /* DateTests.swift */; };
+		28DF8DFC2698D3A300CD0462 /* APIPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DFB2698D3A300CD0462 /* APIPathTests.swift */; };
+		28DF8DFE2698D44200CD0462 /* WeekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DFD2698D44200CD0462 /* WeekTests.swift */; };
+		28DF8E002698D6A000CD0462 /* PeriodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DFF2698D6A000CD0462 /* PeriodTests.swift */; };
+		28DF8E022698D73D00CD0462 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8E012698D73D00CD0462 /* MainViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28DF8DEA2698CBD000CD0462 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 283799FE255A1FDC000750EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28379A05255A1FDC000750EF;
+			remoteInfo = AmazingTalker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		28379A06255A1FDC000750EF /* AmazingTalker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmazingTalker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +101,18 @@
 		28DF8DDB2697FC8A00CD0462 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
 		28DF8DDD2698425700CD0462 /* PeriodHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodHandler.swift; sourceTree = "<group>"; };
 		28DF8DDF2698987B00CD0462 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		28DF8DE52698CBD000CD0462 /* AmazingTalkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmazingTalkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DF8DE92698CBD000CD0462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28DF8DEF2698CC5200CD0462 /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
+		28DF8DF12698CD0400CD0462 /* URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
+		28DF8DF32698CD7600CD0462 /* APIRequestHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHandlerTests.swift; sourceTree = "<group>"; };
+		28DF8DF52698CEB800CD0462 /* APIParseHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParseHandlerTests.swift; sourceTree = "<group>"; };
+		28DF8DF72698CFED00CD0462 /* APIHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandlerTests.swift; sourceTree = "<group>"; };
+		28DF8DF92698D08C00CD0462 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		28DF8DFB2698D3A300CD0462 /* APIPathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPathTests.swift; sourceTree = "<group>"; };
+		28DF8DFD2698D44200CD0462 /* WeekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTests.swift; sourceTree = "<group>"; };
+		28DF8DFF2698D6A000CD0462 /* PeriodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodTests.swift; sourceTree = "<group>"; };
+		28DF8E012698D73D00CD0462 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +125,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28DF8DE22698CBD000CD0462 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				28379A08255A1FDC000750EF /* AmazingTalker */,
+				28DF8DE62698CBD000CD0462 /* AmazingTalkerTests */,
 				28379A07255A1FDC000750EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				28379A06255A1FDC000750EF /* AmazingTalker.app */,
+				28DF8DE52698CBD000CD0462 /* AmazingTalkerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +258,24 @@
 			path = Fake;
 			sourceTree = "<group>";
 		};
+		28DF8DE62698CBD000CD0462 /* AmazingTalkerTests */ = {
+			isa = PBXGroup;
+			children = (
+				28DF8DE92698CBD000CD0462 /* Info.plist */,
+				28DF8DEF2698CC5200CD0462 /* ColorTests.swift */,
+				28DF8DF12698CD0400CD0462 /* URLTests.swift */,
+				28DF8DF32698CD7600CD0462 /* APIRequestHandlerTests.swift */,
+				28DF8DF52698CEB800CD0462 /* APIParseHandlerTests.swift */,
+				28DF8DF72698CFED00CD0462 /* APIHandlerTests.swift */,
+				28DF8DF92698D08C00CD0462 /* DateTests.swift */,
+				28DF8DFB2698D3A300CD0462 /* APIPathTests.swift */,
+				28DF8DFD2698D44200CD0462 /* WeekTests.swift */,
+				28DF8DFF2698D6A000CD0462 /* PeriodTests.swift */,
+				28DF8E012698D73D00CD0462 /* MainViewModelTests.swift */,
+			);
+			path = AmazingTalkerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,18 +300,40 @@
 			productReference = 28379A06255A1FDC000750EF /* AmazingTalker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		28DF8DE42698CBD000CD0462 /* AmazingTalkerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28DF8DEE2698CBD000CD0462 /* Build configuration list for PBXNativeTarget "AmazingTalkerTests" */;
+			buildPhases = (
+				28DF8DE12698CBD000CD0462 /* Sources */,
+				28DF8DE22698CBD000CD0462 /* Frameworks */,
+				28DF8DE32698CBD000CD0462 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28DF8DEB2698CBD000CD0462 /* PBXTargetDependency */,
+			);
+			name = AmazingTalkerTests;
+			productName = AmazingTalkerTests;
+			productReference = 28DF8DE52698CBD000CD0462 /* AmazingTalkerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		283799FE255A1FDC000750EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = AT;
-				LastSwiftUpdateCheck = 1210;
+				CLASSPREFIX = "";
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					28379A05255A1FDC000750EF = {
 						CreatedOnToolsVersion = 12.1;
+					};
+					28DF8DE42698CBD000CD0462 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 28379A05255A1FDC000750EF;
 					};
 				};
 			};
@@ -274,6 +355,7 @@
 			projectRoot = "";
 			targets = (
 				28379A05255A1FDC000750EF /* AmazingTalker */,
+				28DF8DE42698CBD000CD0462 /* AmazingTalkerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -291,6 +373,13 @@
 				28379A24255A2048000750EF /* Main.storyboard in Resources */,
 				28815B5B255B7EA600B14FAE /* PeriodTableViewCell.xib in Resources */,
 				28991909255A443C00EF8881 /* timetable.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28DF8DE32698CBD000CD0462 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +418,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28DF8DE12698CBD000CD0462 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28DF8DF02698CC5200CD0462 /* ColorTests.swift in Sources */,
+				28DF8DFE2698D44200CD0462 /* WeekTests.swift in Sources */,
+				28DF8DFA2698D08C00CD0462 /* DateTests.swift in Sources */,
+				28DF8DFC2698D3A300CD0462 /* APIPathTests.swift in Sources */,
+				28DF8DF22698CD0400CD0462 /* URLTests.swift in Sources */,
+				28DF8DF42698CD7600CD0462 /* APIRequestHandlerTests.swift in Sources */,
+				28DF8DF82698CFED00CD0462 /* APIHandlerTests.swift in Sources */,
+				28DF8DF62698CEB800CD0462 /* APIParseHandlerTests.swift in Sources */,
+				28DF8E002698D6A000CD0462 /* PeriodTests.swift in Sources */,
+				28DF8E022698D73D00CD0462 /* MainViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28DF8DEB2698CBD000CD0462 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28379A05255A1FDC000750EF /* AmazingTalker */;
+			targetProxy = 28DF8DEA2698CBD000CD0462 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		28379A28255A20C3000750EF /* Localizable.strings */ = {
@@ -500,6 +614,46 @@
 			};
 			name = Release;
 		};
+		28DF8DEC2698CBD000CD0462 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AmazingTalkerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.AmazingTalkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmazingTalker.app/AmazingTalker";
+			};
+			name = Debug;
+		};
+		28DF8DED2698CBD000CD0462 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AmazingTalkerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.AmazingTalkerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmazingTalker.app/AmazingTalker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -517,6 +671,15 @@
 			buildConfigurations = (
 				28379A1B255A1FDD000750EF /* Debug */,
 				28379A1C255A1FDD000750EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28DF8DEE2698CBD000CD0462 /* Build configuration list for PBXNativeTarget "AmazingTalkerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DF8DEC2698CBD000CD0462 /* Debug */,
+				28DF8DED2698CBD000CD0462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

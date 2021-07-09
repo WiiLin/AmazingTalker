@@ -9,11 +9,11 @@ import Foundation
 
 class Week {
     var dates: [Date]
-    var first: Date {
+    var first: Date! {
         return dates.first!
     }
 
-    var last: Date {
+    var last: Date! {
         return dates.last!
     }
 

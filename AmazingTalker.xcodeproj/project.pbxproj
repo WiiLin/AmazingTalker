@@ -28,14 +28,14 @@
 		289B4000255A83B800C8D147 /* ATCalendarViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */; };
 		289B400F255AEA4000C8D147 /* Date+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B400E255AEA4000C8D147 /* Date+Custom.swift */; };
 		289B4014255B77D800C8D147 /* ATDayTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B4013255B77D800C8D147 /* ATDayTimetable.swift */; };
-		28DF8DBD26970D5600CD0462 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DBC26970D5600CD0462 /* API.swift */; };
+		28DF8DBD26970D5600CD0462 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DBC26970D5600CD0462 /* Requestable.swift */; };
 		28DF8DC026970DA000CD0462 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28DF8DBF26970DA000CD0462 /* Alamofire */; };
 		28DF8DC22697149D00CD0462 /* APIParseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC12697149D00CD0462 /* APIParseHandler.swift */; };
 		28DF8DC42697497500CD0462 /* Alamofire+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */; };
 		28DF8DC626974A8800CD0462 /* URL+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC526974A8800CD0462 /* URL+Custom.swift */; };
 		28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */; };
 		28DF8DCA2697534F00CD0462 /* ATMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC92697534E00CD0462 /* ATMainViewModel.swift */; };
-		28DF8DCC269754B300CD0462 /* WLObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DCB269754B300CD0462 /* WLObservable.swift */; };
+		28DF8DCC269754B300CD0462 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DCB269754B300CD0462 /* Observable.swift */; };
 		28DF8DCF269757E500CD0462 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 28DF8DCE269757E500CD0462 /* PKHUD */; };
 		28DF8DD126975BB300CD0462 /* TimeZone+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD026975BB300CD0462 /* TimeZone+Custom.swift */; };
 /* End PBXBuildFile section */
@@ -65,13 +65,13 @@
 		289B3FFF255A83B800C8D147 /* ATCalendarViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCalendarViewLayout.swift; sourceTree = "<group>"; };
 		289B400E255AEA4000C8D147 /* Date+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Custom.swift"; sourceTree = "<group>"; };
 		289B4013255B77D800C8D147 /* ATDayTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATDayTimetable.swift; sourceTree = "<group>"; };
-		28DF8DBC26970D5600CD0462 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		28DF8DBC26970D5600CD0462 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		28DF8DC12697149D00CD0462 /* APIParseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParseHandler.swift; sourceTree = "<group>"; };
 		28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Custom.swift"; sourceTree = "<group>"; };
 		28DF8DC526974A8800CD0462 /* URL+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Custom.swift"; sourceTree = "<group>"; };
 		28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHandler.swift; sourceTree = "<group>"; };
 		28DF8DC92697534E00CD0462 /* ATMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATMainViewModel.swift; sourceTree = "<group>"; };
-		28DF8DCB269754B300CD0462 /* WLObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLObservable.swift; sourceTree = "<group>"; };
+		28DF8DCB269754B300CD0462 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		28DF8DD026975BB300CD0462 /* TimeZone+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeZone+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,7 +174,7 @@
 			children = (
 				289B4013255B77D800C8D147 /* ATDayTimetable.swift */,
 				28379A50255A2B9E000750EF /* API */,
-				28DF8DCB269754B300CD0462 /* WLObservable.swift */,
+				28DF8DCB269754B300CD0462 /* Observable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				28991907255A440A00EF8881 /* TestCase */,
-				28DF8DBC26970D5600CD0462 /* API.swift */,
+				28DF8DBC26970D5600CD0462 /* Requestable.swift */,
 				28379A41255A25D5000750EF /* APIHandler.swift */,
 				28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */,
 				28DF8DC12697149D00CD0462 /* APIParseHandler.swift */,
@@ -305,14 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28DF8DBD26970D5600CD0462 /* API.swift in Sources */,
+				28DF8DBD26970D5600CD0462 /* Requestable.swift in Sources */,
 				28815B5A255B7EA600B14FAE /* ATTimePeriodCell.swift in Sources */,
 				289B4000255A83B800C8D147 /* ATCalendarViewLayout.swift in Sources */,
 				28379A0E255A1FDC000750EF /* ATMainViewController.swift in Sources */,
 				28379A0A255A1FDC000750EF /* AppDelegate.swift in Sources */,
 				28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */,
 				28DF8DCA2697534F00CD0462 /* ATMainViewModel.swift in Sources */,
-				28DF8DCC269754B300CD0462 /* WLObservable.swift in Sources */,
+				28DF8DCC269754B300CD0462 /* Observable.swift in Sources */,
 				289B4014255B77D800C8D147 /* ATDayTimetable.swift in Sources */,
 				28DF8DC42697497500CD0462 /* Alamofire+Custom.swift in Sources */,
 				28379A3E255A2509000750EF /* Localizable.swift in Sources */,

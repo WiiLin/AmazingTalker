@@ -8,15 +8,20 @@
 import Foundation
 
 class ATMainViewModel {
-    let apiHandler: APIHandler = APIHandler()
+    let apiRequestable: APIRequestable
 
     @Observable var isLoading: Bool = false
     @Observable var errorMessage: String = ""
-    @Observable var calendar: CalenderAPI.Calendar?
+    @Observable var calendar: CalenderRequest.Calendar?
 
+    init(apiRequestable: APIRequestable) {
+        self.apiRequestable = apiRequestable
+    }
+    
+    
     func getCalander() {
         isLoading = true
-        apiHandler.getCanender { [weak self] result in
+        apiRequestable.getCanender { [weak self] result in
             guard let self = self else { return }
             self.isLoading = false
             switch result {

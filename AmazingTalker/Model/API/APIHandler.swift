@@ -8,12 +8,26 @@
 import Alamofire
 import Foundation
 
-class APIHandler {
+protocol APIRequestable {
+    func getCanender(completionHandler: @escaping (Result<CalenderRequest.Calendar, APIError>) -> Void)
+}
 
+class APIHandler: APIRequestable {
     private lazy var requestHandler: APIRequestHandler = APIRequestHandler()
 
-    func getCanender(completionHandler: @escaping (Result<CalenderAPI.Calendar, APIError>) -> Void) {
-        let api = CalenderAPI(testMode: true)
-        requestHandler.request(api: api, responseType: CalenderAPI.Calendar.self, completionHandler: completionHandler)
+    func getCanender(completionHandler: @escaping (Result<CalenderRequest.Calendar, APIError>) -> Void) {
+        let request = CalenderRequest()
+        requestHandler.request(request, responseType: CalenderRequest.Calendar.self, completionHandler: completionHandler)
     }
+}
+
+class FakeAPIHandler: APIRequestable {
+    private lazy var parseHandler = APIParseHandler()
+    
+    func getCanender(completionHandler: @escaping (Result<CalenderRequest.Calendar, APIError>) -> Void) {
+        let request = CalenderRequest()
+        parseHandler.parse(request.path.testData, responseType: CalenderRequest.Calendar.self, completionHandler: completionHandler)
+    }
+    
+    
 }

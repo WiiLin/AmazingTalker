@@ -15,27 +15,24 @@ class APIRequestHandler {
         session.session.configuration.timeoutIntervalForRequest = 60
         return session
     }()
+    
 
-    func request<ApiRequest: API, ApiResponse: Decodable>(api: ApiRequest,
+    func request<ApiRequest: Requestable, ApiResponse: Decodable>(_ apiRequest: ApiRequest,
                                                           responseType: ApiResponse.Type,
                                                           completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void) {
-        guard api.testMode == false else {
-            parseHandler.parse(api.path.testData, responseType: responseType, completionHandler: completionHandler)
-            return
-        }
 
-        guard let url = URL.apiUrl(path: api.path) else {
+        guard let url = URL.apiUrl(path: apiRequest.path) else {
             completionHandler(.failure(.urlCreateError))
             return
         }
 
         let request: DataRequest = sessionManager.request(url,
-                                                          method: api.method,
-                                                          parameters: api.parameters,
+                                                          method: apiRequest.method,
+                                                          parameters: apiRequest.parameters,
                                                           encoding: URLEncoding.default,
-                                                          headers: api.headers)
+                                                          headers: apiRequest.headers)
 
-        self.request(request: request, method: api.method, parameters: api.parameters) { [weak self] result in
+        self.request(request: request, method: apiRequest.method, parameters: apiRequest.parameters) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(data):

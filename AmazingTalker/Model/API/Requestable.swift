@@ -8,7 +8,7 @@
 import Alamofire
 import Foundation
 
-protocol API {
+protocol Requestable {
     associatedtype ApiResponse: Decodable
 
     var request: Encodable? { get }
@@ -16,10 +16,9 @@ protocol API {
     var method: HTTPMethod { get }
     var headers: HTTPHeaders? { get }
     var parameters: Parameters? { get }
-    var testMode: Bool { get }
 }
 
-extension API where Self: Encodable {
+extension Requestable where Self: Encodable {
     var parameters: Parameters? {
         if let requestType = request, let parameters = requestType.parameters(keyEncodingStrategy: .convertToSnakeCase), !parameters.isEmpty {
             return parameters
@@ -41,7 +40,7 @@ enum APIPath: String {
     }
 }
 
-struct CalenderAPI: API, Encodable {
+struct CalenderRequest: Requestable, Encodable {
     struct Calendar: Decodable {
         let available: [ATTimePeriod.Range]
         let booked: [ATTimePeriod.Range]
@@ -52,5 +51,4 @@ struct CalenderAPI: API, Encodable {
     var path: APIPath { return .calendar }
     var method: HTTPMethod { return .get }
     var headers: HTTPHeaders? { return nil }
-    let testMode: Bool
 }

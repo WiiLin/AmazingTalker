@@ -19,7 +19,7 @@ class ATMainViewController: UIViewController {
     var canGoNextWeekkObservation: NSKeyValueObservation?
     var canGoLastWeekObservation: NSKeyValueObservation?
     var weekRangeDescriptionObservation: NSKeyValueObservation?
-    let viewModel: ATMainViewModel = ATMainViewModel()
+    let viewModel: ATMainViewModel = ATMainViewModel(apiRequestable: FakeAPIHandler())
 
     // MARK: - Life Cycle
 

@@ -50,7 +50,7 @@ private extension MainViewController {
 
     func setupSubViews() {
         timetableCollectionView.register(UINib(nibName: "\(DayPeriodCollectionViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(DayPeriodCollectionViewCell.self)")
-        timeZoneLabel.text = String(format: "time_display_in".localized, TimeZone.current.description)
+        timeZoneLabel.text = String(format: "*時間以 %@ 顯示", TimeZone.current.description)
     }
 
     @IBAction func onClickLastWeek(_ sender: Any) {

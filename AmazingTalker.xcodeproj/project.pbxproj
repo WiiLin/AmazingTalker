@@ -16,7 +16,6 @@
 		28379A2D255A20C3000750EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28379A2A255A20C3000750EF /* Assets.xcassets */; };
 		28379A32255A21E9000750EF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28379A31255A21E9000750EF /* Colors.xcassets */; };
 		28379A36255A22E1000750EF /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A35255A22E1000750EF /* Color+Custom.swift */; };
-		28379A3E255A2509000750EF /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A3D255A2509000750EF /* Localizable.swift */; };
 		28379A42255A25D5000750EF /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A41255A25D5000750EF /* APIHandler.swift */; };
 		28379A4E255A2A95000750EF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A4D255A2A94000750EF /* APIError.swift */; };
 		28815B5A255B7EA600B14FAE /* PeriodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28815B58255B7EA600B14FAE /* PeriodTableViewCell.swift */; };
@@ -77,7 +76,6 @@
 		28379A2B255A20C3000750EF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		28379A31255A21E9000750EF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		28379A35255A22E1000750EF /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
-		28379A3D255A2509000750EF /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		28379A41255A25D5000750EF /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		28379A4D255A2A94000750EF /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		28815B58255B7EA600B14FAE /* PeriodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodTableViewCell.swift; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				28DF8DD42697FADD00CD0462 /* APIRequestable.swift */,
-				28379A3D255A2509000750EF /* Localizable.swift */,
 				28DF8DD62697FB1C00CD0462 /* Requestable.swift */,
 			);
 			path = Procotol;
@@ -403,7 +400,6 @@
 				289B400F255AEA4000C8D147 /* Date+Custom.swift in Sources */,
 				289B3FF0255A7BF900C8D147 /* DayPeriodCollectionViewCell.swift in Sources */,
 				28DF8DDA2697FC1B00CD0462 /* FakeAPIHandler.swift in Sources */,
-				28379A3E255A2509000750EF /* Localizable.swift in Sources */,
 				28379A0E255A1FDC000750EF /* MainViewController.swift in Sources */,
 				28DF8DCA2697534F00CD0462 /* MainViewModel.swift in Sources */,
 				28DF8DCC269754B300CD0462 /* Observable.swift in Sources */,

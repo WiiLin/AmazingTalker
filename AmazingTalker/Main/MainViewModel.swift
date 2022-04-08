@@ -18,12 +18,11 @@ class MainViewModel {
     private let apiRequestable: APIRequestable
     weak var delegate: MainViewModelDelegate?
 
-    @Observable var week: Week
-    @Observable var isLoading: Bool = false
-    @Observable var errorMessage: String = ""
-    @Observable var canGoLastWeek: Bool = false
-    @Observable var canGoNextWeek: Bool = false
-    @Observable var weekRangeDescription: String = ""
+    @Observable private(set) var week: Week
+    @Observable private(set) var errorMessage: String = ""
+    @Observable private(set) var canGoLastWeek: Bool = false
+    @Observable private(set) var canGoNextWeek: Bool = false
+    @Observable private(set) var weekRangeDescription: String = ""
 
     // MARK: - Life Cycle
 
@@ -73,10 +72,8 @@ extension MainViewModel {
     }
 
     func getCalander() {
-        isLoading = true
         apiRequestable.getTimetable { [weak self] result in
             guard let self = self else { return }
-            self.isLoading = false
             switch result {
             case let .success(timetable):
                 PeriodHandler.shared.configure(timetable: timetable)

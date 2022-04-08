@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,15 +26,15 @@
 		289B3FF1255A7BF900C8D147 /* DayPeriodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 289B3FEF255A7BF900C8D147 /* DayPeriodCollectionViewCell.xib */; };
 		289B4000255A83B800C8D147 /* TimetableCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B3FFF255A83B800C8D147 /* TimetableCollectionViewLayout.swift */; };
 		289B400F255AEA4000C8D147 /* Date+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B400E255AEA4000C8D147 /* Date+Custom.swift */; };
+		28A8C90D2800306500D27A41 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8C90C2800306500D27A41 /* HTTPMethod.swift */; };
+		28A8C90F2800312F00D27A41 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8C90E2800312F00D27A41 /* Parameters.swift */; };
 		28DF8DBD26970D5600CD0462 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DBC26970D5600CD0462 /* API.swift */; };
-		28DF8DC026970DA000CD0462 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 28DF8DBF26970DA000CD0462 /* Alamofire */; };
 		28DF8DC22697149D00CD0462 /* APIParseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC12697149D00CD0462 /* APIParseHandler.swift */; };
 		28DF8DC42697497500CD0462 /* Alamofire+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */; };
 		28DF8DC626974A8800CD0462 /* URL+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC526974A8800CD0462 /* URL+Custom.swift */; };
 		28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */; };
 		28DF8DCA2697534F00CD0462 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC92697534E00CD0462 /* MainViewModel.swift */; };
 		28DF8DCC269754B300CD0462 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DCB269754B300CD0462 /* Observable.swift */; };
-		28DF8DCF269757E500CD0462 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 28DF8DCE269757E500CD0462 /* PKHUD */; };
 		28DF8DD126975BB300CD0462 /* TimeZone+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD026975BB300CD0462 /* TimeZone+Custom.swift */; };
 		28DF8DD52697FADD00CD0462 /* APIRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD42697FADD00CD0462 /* APIRequestable.swift */; };
 		28DF8DD72697FB1C00CD0462 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DD62697FB1C00CD0462 /* Requestable.swift */; };
@@ -87,6 +87,8 @@
 		289B3FEF255A7BF900C8D147 /* DayPeriodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayPeriodCollectionViewCell.xib; sourceTree = "<group>"; };
 		289B3FFF255A83B800C8D147 /* TimetableCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableCollectionViewLayout.swift; sourceTree = "<group>"; };
 		289B400E255AEA4000C8D147 /* Date+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Custom.swift"; sourceTree = "<group>"; };
+		28A8C90C2800306500D27A41 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		28A8C90E2800312F00D27A41 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		28DF8DBC26970D5600CD0462 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		28DF8DC12697149D00CD0462 /* APIParseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParseHandler.swift; sourceTree = "<group>"; };
 		28DF8DC32697497500CD0462 /* Alamofire+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alamofire+Custom.swift"; sourceTree = "<group>"; };
@@ -120,8 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28DF8DC026970DA000CD0462 /* Alamofire in Frameworks */,
-				28DF8DCF269757E500CD0462 /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +237,8 @@
 				28DF8DC12697149D00CD0462 /* APIParseHandler.swift */,
 				28DF8DDB2697FC8A00CD0462 /* APIPath.swift */,
 				28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */,
+				28A8C90C2800306500D27A41 /* HTTPMethod.swift */,
+				28A8C90E2800312F00D27A41 /* Parameters.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -293,8 +295,6 @@
 			);
 			name = AmazingTalker;
 			packageProductDependencies = (
-				28DF8DBF26970DA000CD0462 /* Alamofire */,
-				28DF8DCE269757E500CD0462 /* PKHUD */,
 			);
 			productName = AmazingTalker;
 			productReference = 28379A06255A1FDC000750EF /* AmazingTalker.app */;
@@ -347,8 +347,6 @@
 			);
 			mainGroup = 283799FD255A1FDC000750EF;
 			packageReferences = (
-				28DF8DBE26970DA000CD0462 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				28DF8DCD269757E500CD0462 /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = 28379A07255A1FDC000750EF /* Products */;
 			projectDirPath = "";
@@ -398,8 +396,10 @@
 				28DF8DDC2697FC8A00CD0462 /* APIPath.swift in Sources */,
 				28DF8DD52697FADD00CD0462 /* APIRequestable.swift in Sources */,
 				28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */,
+				28A8C90F2800312F00D27A41 /* Parameters.swift in Sources */,
 				28379A0A255A1FDC000750EF /* AppDelegate.swift in Sources */,
 				28379A36255A22E1000750EF /* Color+Custom.swift in Sources */,
+				28A8C90D2800306500D27A41 /* HTTPMethod.swift in Sources */,
 				289B400F255AEA4000C8D147 /* Date+Custom.swift in Sources */,
 				289B3FF0255A7BF900C8D147 /* DayPeriodCollectionViewCell.swift in Sources */,
 				28DF8DDA2697FC1B00CD0462 /* FakeAPIHandler.swift in Sources */,
@@ -685,38 +685,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		28DF8DBE26970DA000CD0462 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.3;
-			};
-		};
-		28DF8DCD269757E500CD0462 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pkluz/PKHUD";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		28DF8DBF26970DA000CD0462 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 28DF8DBE26970DA000CD0462 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		28DF8DCE269757E500CD0462 /* PKHUD */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 28DF8DCD269757E500CD0462 /* XCRemoteSwiftPackageReference "PKHUD" */;
-			productName = PKHUD;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 283799FE255A1FDC000750EF /* Project object */;
 }

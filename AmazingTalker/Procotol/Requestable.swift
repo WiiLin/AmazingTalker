@@ -5,7 +5,6 @@
 //  Created by Wii Lin on 2021/7/9.
 //
 
-import Alamofire
 import Foundation
 
 protocol Requestable {
@@ -14,7 +13,6 @@ protocol Requestable {
     var request: Encodable? { get }
     var path: APIPath { get }
     var method: HTTPMethod { get }
-    var headers: HTTPHeaders? { get }
     var parameters: Parameters? { get }
 }
 

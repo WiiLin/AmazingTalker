@@ -5,7 +5,6 @@
 //  Created by Wii Lin on 2021/7/8.
 //
 
-import Alamofire
 import Foundation
 
 class APIParseHandler {

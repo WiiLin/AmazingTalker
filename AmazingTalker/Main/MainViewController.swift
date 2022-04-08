@@ -4,7 +4,7 @@
 //
 //  Created by Wii Lin on 2021/7/9.
 //
-import PKHUD
+
 import UIKit
 
 class MainViewController: UIViewController {
@@ -37,13 +37,6 @@ private extension MainViewController {
             print(errorMessage)
         }
 
-        viewModel.$isLoading(bind: self) { weakSelf, isLoading in
-            if isLoading {
-                HUD.show(.progress, onView: weakSelf.view)
-            } else {
-                HUD.hide(animated: true)
-            }
-        }
         viewModel.$canGoLastWeek(bind: self, fireNow: true) { weakSelf, canGoLastWeek in
             self.lastWeekButton.isEnabled = canGoLastWeek
         }

@@ -2,7 +2,7 @@
 //  PeriodTableViewCell.swift
 //  AmazingTalker
 //
-//  Created by Wii Lin on 2020/7/9.
+//  Created by Wii Lin on 2022/4/10.
 //
 
 import UIKit
@@ -21,8 +21,6 @@ class PeriodTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  APIRequestHandler.swift
+//  URLRequestHandler.swift
 //  AmazingTalker
 //
 //  Created by Wii Lin on 2022/4/10.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class APIRequestHandler {
+class URLRequestHandler {
     private lazy var parseHandler = APIParseHandler()
     func request<ApiRequest: Requestable, ApiResponse: Decodable>(_ apiRequest: ApiRequest,
                                                                   responseType: ApiResponse.Type,

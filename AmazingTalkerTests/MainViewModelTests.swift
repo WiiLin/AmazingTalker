@@ -19,16 +19,6 @@ class MainViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testIsLoading() {
-        expectation = expectation(description: "apiExpectation")
-        let viewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
-        viewModel.delegate = self
-        XCTAssertFalse(viewModel.isLoading)
-        viewModel.getCalander()
-        waitForExpectations(timeout: 1)
-        XCTAssertFalse(viewModel.isLoading)
-    }
-
     func testWeekMove() {
         let viewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
         XCTAssertFalse(viewModel.canGoLastWeek)

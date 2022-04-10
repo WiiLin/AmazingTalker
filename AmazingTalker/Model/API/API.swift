@@ -19,9 +19,9 @@ struct Timetable: Decodable {
     let booked: [Range]
 }
 
-struct TimetableRequest: Requestable, Encodable {
+struct TimetableApi: Requestable, Encodable {
     typealias ApiResponse = Timetable
-    var request: Encodable? { return self }
+    var parametersObject: Encodable? { return self }
     var path: APIPath { return .timetable }
     var method: HTTPMethod { return .GET }
 }

@@ -10,7 +10,7 @@ import Foundation
 protocol Requestable {
     associatedtype ApiResponse: Decodable
 
-    var request: Encodable? { get }
+    var parametersObject: Encodable? { get }
     var path: APIPath { get }
     var method: HTTPMethod { get }
     var parameters: Parameters? { get }
@@ -18,7 +18,7 @@ protocol Requestable {
 
 extension Requestable where Self: Encodable {
     var parameters: Parameters? {
-        if let requestType = request, let parameters = requestType.parameters(keyEncodingStrategy: .convertToSnakeCase), !parameters.isEmpty {
+        if let parametersObject = parametersObject, let parameters = parametersObject.parameters(keyEncodingStrategy: .convertToSnakeCase), !parameters.isEmpty {
             return parameters
         } else {
             return nil

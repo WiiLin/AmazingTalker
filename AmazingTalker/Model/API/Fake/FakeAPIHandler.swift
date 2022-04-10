@@ -11,7 +11,7 @@ class FakeAPIHandler: APIRequestable {
     private lazy var parseHandler = APIParseHandler()
 
     func getTimetable(completionHandler: @escaping (Result<Timetable, APIError>) -> Void) {
-        let request = TimetableRequest()
+        let request = TimetableApi()
         parseHandler.parse(request.path.testData, responseType: Timetable.self, completionHandler: completionHandler)
     }
 }

@@ -39,12 +39,10 @@ class DayPeriodCollectionViewCell: UICollectionViewCell {
 // MARK: - Interface
 
 extension DayPeriodCollectionViewCell {
-    func configure(_ date: Date) {
+    func configure(date: Date, periods: [Period]) {
         weekDayLabel.text = date.shortWeekdaySymbol
         dayLabel.text = "\(date.day)"
-        if date.moreThanOrEqualTo(Date()) {
-            configurePeriods(PeriodHandler.shared.period(with: date))
-        }
+        configurePeriods(periods)
         tableView.reloadData()
     }
 }
@@ -73,3 +71,18 @@ extension DayPeriodCollectionViewCell: UITableViewDataSource {
         return cell
     }
 }
+
+
+extension DayPeriodCollectionViewCell {
+    class func cellSize(periods:[Period]) -> CGSize {
+        let enableViewHeight: CGFloat = 4
+        let dateViewTopPadding: CGFloat = 10
+        let dateViewHeight: CGFloat = 46
+        let dateViewBottomPadding: CGFloat = 10
+        let periodsHeight = CGFloat(periods.count) * PeriodTableViewCell.height
+        let totalHeight: CGFloat = enableViewHeight + dateViewHeight + dateViewTopPadding + dateViewBottomPadding + periodsHeight
+        return CGSize(width: TimetableCollectionViewLayout.itemWidth, height: totalHeight)
+    }
+}
+
+

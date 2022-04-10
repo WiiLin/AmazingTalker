@@ -1,5 +1,5 @@
 //
-//  ATApi.swift
+//  Api.swift
 //  AmazingTalker
 //
 //  Created by Wii Lin on 2022/4/10.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EmptyResponse: Decodable { }
+struct ApiEmptyResponse: Decodable { }
 
 struct Timetable: Decodable {
     struct Range: Decodable {

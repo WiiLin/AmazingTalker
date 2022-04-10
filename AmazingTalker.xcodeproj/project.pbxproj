@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22BB4FA771CD1B5E7E26A21F /* Pods_AmazingTalkerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F95F91B2E0A5CAD36B6798 /* Pods_AmazingTalkerTests.framework */; };
 		28379A0A255A1FDC000750EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A09255A1FDC000750EF /* AppDelegate.swift */; };
 		28379A0C255A1FDC000750EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A0B255A1FDC000750EF /* SceneDelegate.swift */; };
 		28379A0E255A1FDC000750EF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28379A0D255A1FDC000750EF /* MainViewController.swift */; };
@@ -29,7 +30,7 @@
 		28A8C90F2800312F00D27A41 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A8C90E2800312F00D27A41 /* Parameters.swift */; };
 		28DF8DBD26970D5600CD0462 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DBC26970D5600CD0462 /* API.swift */; };
 		28DF8DC22697149D00CD0462 /* APIParseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC12697149D00CD0462 /* APIParseHandler.swift */; };
-		28DF8DC42697497500CD0462 /* Encodable+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC32697497500CD0462 /* Encodable+Dictionary.swift */; };
+		28DF8DC42697497500CD0462 /* Encodable+Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC32697497500CD0462 /* Encodable+Parameters.swift */; };
 		28DF8DC626974A8800CD0462 /* URL+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC526974A8800CD0462 /* URL+Custom.swift */; };
 		28DF8DC826974C6F00CD0462 /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */; };
 		28DF8DCA2697534F00CD0462 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DC92697534E00CD0462 /* MainViewModel.swift */; };
@@ -51,6 +52,7 @@
 		28DF8DFE2698D44200CD0462 /* WeekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DFD2698D44200CD0462 /* WeekTests.swift */; };
 		28DF8E002698D6A000CD0462 /* PeriodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8DFF2698D6A000CD0462 /* PeriodTests.swift */; };
 		28DF8E022698D73D00CD0462 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DF8E012698D73D00CD0462 /* MainViewModelTests.swift */; };
+		8AD2F2F0D30CFE5C005CA38C /* Pods_AmazingTalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE712856F0F132173F411DD /* Pods_AmazingTalker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +91,7 @@
 		28A8C90E2800312F00D27A41 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		28DF8DBC26970D5600CD0462 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		28DF8DC12697149D00CD0462 /* APIParseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParseHandler.swift; sourceTree = "<group>"; };
-		28DF8DC32697497500CD0462 /* Encodable+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Dictionary.swift"; sourceTree = "<group>"; };
+		28DF8DC32697497500CD0462 /* Encodable+Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Parameters.swift"; sourceTree = "<group>"; };
 		28DF8DC526974A8800CD0462 /* URL+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Custom.swift"; sourceTree = "<group>"; };
 		28DF8DC726974C6F00CD0462 /* APIRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHandler.swift; sourceTree = "<group>"; };
 		28DF8DC92697534E00CD0462 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -113,6 +115,12 @@
 		28DF8DFD2698D44200CD0462 /* WeekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTests.swift; sourceTree = "<group>"; };
 		28DF8DFF2698D6A000CD0462 /* PeriodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodTests.swift; sourceTree = "<group>"; };
 		28DF8E012698D73D00CD0462 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		444B4367ECF7A4DEEDF89910 /* Pods-AmazingTalkerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmazingTalkerTests.debug.xcconfig"; path = "Target Support Files/Pods-AmazingTalkerTests/Pods-AmazingTalkerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		48FE527292CCE1C8C1562685 /* Pods-AmazingTalker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmazingTalker.debug.xcconfig"; path = "Target Support Files/Pods-AmazingTalker/Pods-AmazingTalker.debug.xcconfig"; sourceTree = "<group>"; };
+		5DAEC097BAF9C1CA8D3C689D /* Pods-AmazingTalkerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmazingTalkerTests.release.xcconfig"; path = "Target Support Files/Pods-AmazingTalkerTests/Pods-AmazingTalkerTests.release.xcconfig"; sourceTree = "<group>"; };
+		96934EEE905FEDACEF0F960A /* Pods-AmazingTalker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmazingTalker.release.xcconfig"; path = "Target Support Files/Pods-AmazingTalker/Pods-AmazingTalker.release.xcconfig"; sourceTree = "<group>"; };
+		D9F95F91B2E0A5CAD36B6798 /* Pods_AmazingTalkerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmazingTalkerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE712856F0F132173F411DD /* Pods_AmazingTalker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmazingTalker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD2F2F0D30CFE5C005CA38C /* Pods_AmazingTalker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BB4FA771CD1B5E7E26A21F /* Pods_AmazingTalkerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +149,8 @@
 				28379A08255A1FDC000750EF /* AmazingTalker */,
 				28DF8DE62698CBD000CD0462 /* AmazingTalkerTests */,
 				28379A07255A1FDC000750EF /* Products */,
+				DEBB8F936C202C1A18F7054D /* Pods */,
+				6014EFCDBC424C431796C004 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,7 +192,7 @@
 		28379A34255A22D1000750EF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				28DF8DC32697497500CD0462 /* Encodable+Dictionary.swift */,
+				28DF8DC32697497500CD0462 /* Encodable+Parameters.swift */,
 				28379A35255A22E1000750EF /* Color+Custom.swift */,
 				289B400E255AEA4000C8D147 /* Date+Custom.swift */,
 				28DF8DD026975BB300CD0462 /* TimeZone+Custom.swift */,
@@ -275,6 +287,27 @@
 			path = AmazingTalkerTests;
 			sourceTree = "<group>";
 		};
+		6014EFCDBC424C431796C004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCE712856F0F132173F411DD /* Pods_AmazingTalker.framework */,
+				D9F95F91B2E0A5CAD36B6798 /* Pods_AmazingTalkerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEBB8F936C202C1A18F7054D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48FE527292CCE1C8C1562685 /* Pods-AmazingTalker.debug.xcconfig */,
+				96934EEE905FEDACEF0F960A /* Pods-AmazingTalker.release.xcconfig */,
+				444B4367ECF7A4DEEDF89910 /* Pods-AmazingTalkerTests.debug.xcconfig */,
+				5DAEC097BAF9C1CA8D3C689D /* Pods-AmazingTalkerTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,17 +315,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28379A1A255A1FDD000750EF /* Build configuration list for PBXNativeTarget "AmazingTalker" */;
 			buildPhases = (
+				4D04C2056A493AB19B91B5C7 /* [CP] Check Pods Manifest.lock */,
 				28379A02255A1FDC000750EF /* Sources */,
 				28379A03255A1FDC000750EF /* Frameworks */,
 				28379A04255A1FDC000750EF /* Resources */,
+				D0CC17B2FAA933152E88BC07 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = AmazingTalker;
-			packageProductDependencies = (
-			);
 			productName = AmazingTalker;
 			productReference = 28379A06255A1FDC000750EF /* AmazingTalker.app */;
 			productType = "com.apple.product-type.application";
@@ -301,6 +334,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28DF8DEE2698CBD000CD0462 /* Build configuration list for PBXNativeTarget "AmazingTalkerTests" */;
 			buildPhases = (
+				CB85CD49707BB55D00873224 /* [CP] Check Pods Manifest.lock */,
 				28DF8DE12698CBD000CD0462 /* Sources */,
 				28DF8DE22698CBD000CD0462 /* Frameworks */,
 				28DF8DE32698CBD000CD0462 /* Resources */,
@@ -343,8 +377,6 @@
 				"zh-Hant",
 			);
 			mainGroup = 283799FD255A1FDC000750EF;
-			packageReferences = (
-			);
 			productRefGroup = 28379A07255A1FDC000750EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -380,12 +412,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4D04C2056A493AB19B91B5C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AmazingTalker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB85CD49707BB55D00873224 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AmazingTalkerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0CC17B2FAA933152E88BC07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AmazingTalker/Pods-AmazingTalker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AmazingTalker/Pods-AmazingTalker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AmazingTalker/Pods-AmazingTalker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28379A02255A1FDC000750EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28DF8DC42697497500CD0462 /* Encodable+Dictionary.swift in Sources */,
+				28DF8DC42697497500CD0462 /* Encodable+Parameters.swift in Sources */,
 				28DF8DBD26970D5600CD0462 /* API.swift in Sources */,
 				28379A4E255A2A95000750EF /* APIError.swift in Sources */,
 				28379A42255A25D5000750EF /* APIHandler.swift in Sources */,
@@ -574,6 +670,7 @@
 		};
 		28379A1B255A1FDD000750EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48FE527292CCE1C8C1562685 /* Pods-AmazingTalker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -593,6 +690,7 @@
 		};
 		28379A1C255A1FDD000750EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96934EEE905FEDACEF0F960A /* Pods-AmazingTalker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -612,6 +710,7 @@
 		};
 		28DF8DEC2698CBD000CD0462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 444B4367ECF7A4DEEDF89910 /* Pods-AmazingTalkerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -632,6 +731,7 @@
 		};
 		28DF8DED2698CBD000CD0462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DAEC097BAF9C1CA8D3C689D /* Pods-AmazingTalkerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

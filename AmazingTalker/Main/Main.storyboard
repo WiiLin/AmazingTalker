@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dor-z0-h23">
-                                <rect key="frame" x="70" y="105" width="30" height="30"/>
+                                <rect key="frame" x="60" y="105" width="30" height="30"/>
                                 <color key="backgroundColor" name="Disable Gray"/>
                                 <state key="normal" title="&gt;">
                                     <color key="titleColor" name="Enable Green"/>
@@ -32,19 +32,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoI-s9-k2g">
-                                <rect key="frame" x="120" y="109.5" width="42" height="21"/>
+                                <rect key="frame" x="110" y="109.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Text Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezi-bW-5jk">
-                                <rect key="frame" x="352" y="821" width="42" height="21"/>
+                                <rect key="frame" x="362" y="821" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="Text Black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="授課時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRQ-Pg-e65">
-                                <rect key="frame" x="20" y="64" width="69.5" height="21"/>
+                                <rect key="frame" x="10" y="64" width="69.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52B-xP-FN9">
-                                <rect key="frame" x="20" y="105" width="30" height="30"/>
+                                <rect key="frame" x="10" y="105" width="30" height="30"/>
                                 <color key="backgroundColor" name="Disable Gray"/>
                                 <state key="normal" title="&lt;">
                                     <color key="titleColor" name="Enable Green"/>
@@ -79,14 +79,14 @@
                             <constraint firstItem="VoI-s9-k2g" firstAttribute="centerY" secondItem="dor-z0-h23" secondAttribute="centerY" id="2BB-DZ-h1Y"/>
                             <constraint firstItem="dor-z0-h23" firstAttribute="leading" secondItem="52B-xP-FN9" secondAttribute="trailing" constant="20" id="2NL-Yb-SPD"/>
                             <constraint firstItem="dor-z0-h23" firstAttribute="top" secondItem="52B-xP-FN9" secondAttribute="top" id="6t9-su-gKM"/>
-                            <constraint firstItem="52B-xP-FN9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ECg-6E-6Ab"/>
-                            <constraint firstItem="fRQ-Pg-e65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rhc-SS-p4a"/>
+                            <constraint firstItem="52B-xP-FN9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ECg-6E-6Ab"/>
+                            <constraint firstItem="fRQ-Pg-e65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Rhc-SS-p4a"/>
                             <constraint firstItem="Ezi-bW-5jk" firstAttribute="top" secondItem="jmR-qp-Tmv" secondAttribute="bottom" constant="30" id="SCL-7B-x6f"/>
                             <constraint firstItem="VoI-s9-k2g" firstAttribute="leading" secondItem="dor-z0-h23" secondAttribute="trailing" constant="20" id="ayy-nD-dkI"/>
                             <constraint firstItem="jmR-qp-Tmv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eeM-yN-m08"/>
                             <constraint firstItem="52B-xP-FN9" firstAttribute="top" secondItem="fRQ-Pg-e65" secondAttribute="bottom" constant="20" id="em8-hp-g9I"/>
                             <constraint firstItem="jmR-qp-Tmv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gg4-mK-ytM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ezi-bW-5jk" secondAttribute="trailing" constant="20" id="kxY-0v-c9x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ezi-bW-5jk" secondAttribute="trailing" constant="10" id="kxY-0v-c9x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ezi-bW-5jk" secondAttribute="bottom" constant="20" id="n3i-1U-tK0"/>
                             <constraint firstItem="jmR-qp-Tmv" firstAttribute="top" secondItem="dor-z0-h23" secondAttribute="bottom" constant="30" id="sp7-D6-yjh"/>
                             <constraint firstItem="fRQ-Pg-e65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xyK-Of-5DP"/>

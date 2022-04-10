@@ -1,5 +1,5 @@
 //
-//  Encodable+Dictionary.swift
+//  Encodable+Parameters.swift
 //  AmazingTalker
 //
 //  Created by Wii Lin on 2022/4/10.

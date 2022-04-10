@@ -35,14 +35,22 @@ class PeriodHandler {
         available = timetable.available
         booked = timetable.booked
     }
+    
+    private var periodsCache: [Date: [Period]] = [:]
 
-    func period(with date: Date) -> [Period] {
-        let available = available.filter { $0.start.inSameDayAs(date) }.map { Period(range: $0, period: .available) }
-        let booked = booked.filter { $0.start.inSameDayAs(date) }.map { Period(range: $0, period: .booked) }
-        var dayTimetable = available + booked
-        dayTimetable.sort { (lhs, rhs) -> Bool in
-            lhs.range.start < rhs.range.start
+    func periods(with date: Date) -> [Period] {
+        guard date.moreThanOrEqualTo(Date()) else { return [] }
+        if let periods = periodsCache[date] {
+            return periods
+        } else {
+            let available = available.filter { $0.start.inSameDayAs(date) }.map { Period(range: $0, period: .available) }
+            let booked = booked.filter { $0.start.inSameDayAs(date) }.map { Period(range: $0, period: .booked) }
+            var periods = available + booked
+            periods.sort { (lhs, rhs) -> Bool in
+                lhs.range.start < rhs.range.start
+            }
+            periodsCache[date] = periods
+            return periods
         }
-        return dayTimetable
     }
 }

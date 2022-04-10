@@ -8,6 +8,7 @@
 import UIKit
 
 class PeriodTableViewCell: UITableViewCell {
+    static let height: CGFloat = 21
     // MARK: - IBOutlet
 
     @IBOutlet private var periodLabel: UILabel!

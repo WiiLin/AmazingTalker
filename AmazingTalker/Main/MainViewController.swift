@@ -74,6 +74,14 @@ extension MainViewController: MainViewModelDelegate {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout, UICollectionViewDelegate
+extension MainViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let date = viewModel.week.dates[indexPath.row]
+        return DayPeriodCollectionViewCell.cellSize(periods: PeriodHandler.shared.periods(with: date))
+    }
+}
+
 // MARK: - UICollectionViewDataSource
 
 extension MainViewController: UICollectionViewDataSource {
@@ -84,7 +92,7 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(DayPeriodCollectionViewCell.self)", for: indexPath) as! DayPeriodCollectionViewCell
         let date = viewModel.week.dates[indexPath.row]
-        cell.configure(date)
+        cell.configure(date:date, periods: PeriodHandler.shared.periods(with: date))
         return cell
     }
 }

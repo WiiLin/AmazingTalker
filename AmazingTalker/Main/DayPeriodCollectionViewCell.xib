@@ -43,8 +43,8 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Loq-u7-iI6">
-                        <rect key="frame" x="0.0" y="70" width="182" height="233"/>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Loq-u7-iI6">
+                        <rect key="frame" x="0.0" y="70" width="182" height="243"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +56,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="2VY-Xf-WiC" secondAttribute="trailing" id="0hv-Xn-H0k"/>
-                    <constraint firstAttribute="bottom" secondItem="Loq-u7-iI6" secondAttribute="bottom" constant="10" id="Lcr-hG-i7u"/>
+                    <constraint firstAttribute="bottom" secondItem="Loq-u7-iI6" secondAttribute="bottom" id="Lcr-hG-i7u"/>
                     <constraint firstItem="GHN-IX-a7k" firstAttribute="leading" secondItem="oo3-55-5V9" secondAttribute="leading" id="MYC-c0-Obl"/>
                     <constraint firstAttribute="trailing" secondItem="GHN-IX-a7k" secondAttribute="trailing" id="UYD-QG-HOn"/>
                     <constraint firstItem="Loq-u7-iI6" firstAttribute="top" secondItem="2VY-Xf-WiC" secondAttribute="bottom" constant="10" id="YOo-zI-7kG"/>
@@ -67,6 +67,7 @@
                     <constraint firstItem="2VY-Xf-WiC" firstAttribute="top" secondItem="GHN-IX-a7k" secondAttribute="bottom" constant="10" id="zqW-ew-eBv"/>
                 </constraints>
             </collectionViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <size key="customSize" width="182" height="313"/>
             <connections>
                 <outlet property="dayLabel" destination="oYS-63-sac" id="EKn-6n-CKZ"/>

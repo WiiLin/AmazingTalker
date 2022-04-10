@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet private var timeZoneLabel: UILabel!
     @IBOutlet private var timetableCollectionView: UICollectionView!
 
-    private lazy var viewModel: MainViewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
+    private lazy var viewModel: MainViewModel = .init(apiRequestable: FakeAPIHandler(), beginDate: Date())
 
     // MARK: - Life Cycle
 
@@ -75,6 +75,7 @@ extension MainViewController: MainViewModelDelegate {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout, UICollectionViewDelegate
+
 extension MainViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let date = viewModel.week.dates[indexPath.row]
@@ -92,7 +93,7 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(DayPeriodCollectionViewCell.self)", for: indexPath) as! DayPeriodCollectionViewCell
         let date = viewModel.week.dates[indexPath.row]
-        cell.configure(date:date, periods: PeriodHandler.shared.periods(with: date))
+        cell.configure(date: date, periods: PeriodHandler.shared.periods(with: date))
         return cell
     }
 }

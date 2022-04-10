@@ -9,7 +9,7 @@
 import XCTest
 
 class MainViewModelTests: XCTestCase {
-    private let viewModel: MainViewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
+    private let viewModel: MainViewModel = .init(apiRequestable: FakeAPIHandler(), beginDate: Date())
     var expectation: XCTestExpectation? // 2
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,7 +21,7 @@ class MainViewModelTests: XCTestCase {
 
     func testIsLoading() {
         expectation = expectation(description: "apiExpectation")
-        let viewModel: MainViewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
+        let viewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
         viewModel.delegate = self
         XCTAssertFalse(viewModel.isLoading)
         viewModel.getCalander()
@@ -30,7 +30,7 @@ class MainViewModelTests: XCTestCase {
     }
 
     func testWeekMove() {
-        let viewModel: MainViewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
+        let viewModel = MainViewModel(apiRequestable: FakeAPIHandler(), beginDate: Date())
         XCTAssertFalse(viewModel.canGoLastWeek)
         XCTAssertTrue(viewModel.canGoNextWeek)
     }

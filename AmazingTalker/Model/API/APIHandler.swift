@@ -8,7 +8,7 @@
 import Foundation
 
 class APIHandler: APIRequestable {
-    private lazy var requestHandler: APIRequestHandler = APIRequestHandler()
+    private lazy var requestHandler: APIRequestHandler = .init()
 
     func getTimetable(completionHandler: @escaping (Result<Timetable, APIError>) -> Void) {
         let request = TimetableRequest()

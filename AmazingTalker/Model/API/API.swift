@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ApiEmptyResponse: Decodable { }
+struct ApiEmptyResponse: Decodable {}
 
 struct Timetable: Decodable {
     struct Range: Decodable {
@@ -21,7 +21,7 @@ struct Timetable: Decodable {
 
 struct TimetableRequest: Requestable, Encodable {
     typealias ApiResponse = Timetable
-    var request: Encodable? { return self } 
+    var request: Encodable? { return self }
     var path: APIPath { return .timetable }
     var method: HTTPMethod { return .GET }
 }

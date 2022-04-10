@@ -11,7 +11,8 @@ class APIRequestHandler {
     private lazy var parseHandler = APIParseHandler()
     func request<ApiRequest: Requestable, ApiResponse: Decodable>(_ apiRequest: ApiRequest,
                                                                   responseType: ApiResponse.Type,
-                                                                  completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void) {
+                                                                  completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void)
+    {
         guard let url = URL.apiURL(path: apiRequest.path) else {
             completionHandler(.failure(.urlCreateError))
             return

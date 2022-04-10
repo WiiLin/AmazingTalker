@@ -13,7 +13,7 @@ class APIParseHandler {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let dateFormatter = ISO8601DateFormatter()
         dateFormatter.formatOptions = [.withInternetDateTime]
-        decoder.dateDecodingStrategy = .custom { (decoder) -> Date in
+        decoder.dateDecodingStrategy = .custom { decoder -> Date in
             let container = try decoder.singleValueContainer()
             let dateString = try container.decode(String.self)
             if let date = dateFormatter.date(from: dateString) {
@@ -27,7 +27,8 @@ class APIParseHandler {
 
     func parse<ApiResponse: Decodable>(_ data: Data?,
                                        responseType: ApiResponse.Type,
-                                       completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void) {
+                                       completionHandler: @escaping (Result<ApiResponse, APIError>) -> Void)
+    {
         if let data = data {
             do {
                 let response = try jsonDecoder.decode(responseType, from: data)

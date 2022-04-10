@@ -5,8 +5,8 @@
 //  Created by Wii Lin on 2022/4/10.
 //
 
-import UIKit
 import AlignedCollectionViewFlowLayout
+import UIKit
 
 class TimetableCollectionViewLayout: AlignedCollectionViewFlowLayout {
     static let column: CGFloat = 7.0
@@ -17,6 +17,7 @@ class TimetableCollectionViewLayout: AlignedCollectionViewFlowLayout {
         let width = (UIScreen.main.bounds.width - totalPading - sectionInset.left - sectionInset.right) / column
         return width
     }()
+
     private func configure() {
         scrollDirection = .vertical
         verticalAlignment = .top

@@ -9,7 +9,7 @@
 import XCTest
 
 class APIRequestHandlerTests: XCTestCase {
-    lazy var requestHandler: APIRequestHandler = APIRequestHandler()
+    lazy var requestHandler: APIRequestHandler = .init()
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }

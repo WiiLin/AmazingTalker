@@ -36,4 +36,3 @@ class Week {
         dates = Date.weekDate(of: offset)
     }
 }
-

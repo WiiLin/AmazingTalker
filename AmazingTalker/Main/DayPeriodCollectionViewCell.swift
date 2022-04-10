@@ -51,10 +51,18 @@ extension DayPeriodCollectionViewCell {
 
 private extension DayPeriodCollectionViewCell {
     func configurePeriods(_ periods: [Period]) {
-        enableView.backgroundColor = !periods.filter{ $0.period == .available }.isEmpty ? .enableGreen : .disableGray
+        enableView.backgroundColor = !periods.filter { $0.period == .available }.isEmpty ? .enableGreen : .disableGray
         weekDayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
         dayLabel.textColor = !periods.isEmpty ? .textBlack : .disableGray
         dataSource = periods
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension DayPeriodCollectionViewCell: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return PeriodTableViewCell.height
     }
 }
 
@@ -72,9 +80,8 @@ extension DayPeriodCollectionViewCell: UITableViewDataSource {
     }
 }
 
-
 extension DayPeriodCollectionViewCell {
-    class func cellSize(periods:[Period]) -> CGSize {
+    class func cellSize(periods: [Period]) -> CGSize {
         let enableViewHeight: CGFloat = 4
         let dateViewTopPadding: CGFloat = 10
         let dateViewHeight: CGFloat = 46
@@ -84,5 +91,3 @@ extension DayPeriodCollectionViewCell {
         return CGSize(width: TimetableCollectionViewLayout.itemWidth, height: totalHeight)
     }
 }
-
-
